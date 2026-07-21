@@ -203,6 +203,7 @@
     text-decoration:none;white-space:nowrap;transition:background .15s ease, color .15s ease;
   }
   .menu-nav a:hover{background:var(--terracotta);color:#fff;border-color:var(--terracotta);}
+  .menu-nav a.active{background:var(--terracotta);color:#fff;border-color:var(--terracotta);}
   .menu-category{margin-top:44px;scroll-margin-top:118px;}
   .menu-cat-head{margin-bottom:16px;}
   .menu-cat-head h3{font-size:1.5rem;display:inline;margin-right:10px;}
@@ -444,7 +445,7 @@
     <!-- Burgers -->
     <div class="menu-category" id="menu-burgers">
       <div class="menu-cat-head">
-        <h3>Burgers</h3>
+        <h3>Burgers</h3><span class="tr">Hamburger</span>
         <p class="menu-cat-note">Served with seasoned chips.</p>
       </div>
       <div class="menu-list">
@@ -497,7 +498,7 @@
     <!-- Kids Meals -->
     <div class="menu-category" id="menu-kids">
       <div class="menu-cat-head">
-        <h3>Kids Meals</h3>
+        <h3>Kids Meals</h3><span class="tr">Çocuk Menüsü</span>
         <p class="menu-cat-note">Kids meals come with an apple and blackcurrant fruit shoot (200ml).</p>
       </div>
       <div class="menu-list">
@@ -757,6 +758,30 @@
 
     var row = document.querySelector('#hoursTable tr[data-day="' + day + '"]');
     if(row) row.classList.add('today');
+  })();
+
+  (function(){
+    var navLinks = Array.from(document.querySelectorAll('.menu-nav a'));
+    if(!navLinks.length || !('IntersectionObserver' in window)) return;
+    var sections = navLinks
+      .map(function(a){ return document.querySelector(a.getAttribute('href')); })
+      .filter(Boolean);
+
+    function setActive(id){
+      navLinks.forEach(function(a){
+        var isMatch = a.getAttribute('href') === '#' + id;
+        a.classList.toggle('active', isMatch);
+        if(isMatch) a.scrollIntoView({inline:'center', block:'nearest', behavior:'smooth'});
+      });
+    }
+
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach(function(s){ observer.observe(s); });
   })();
 </script>
 
