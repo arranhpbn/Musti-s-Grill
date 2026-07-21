@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Musti's Grill & Bistro | Authentic Turkish Kebabs, Horley</title>
+<meta name="description" content="Musti's Grill & Bistro — family-run authentic Turkish restaurant on Horley High Street. Kebabs, wraps, burgers, breakfast & mezze. 4.9★ on Google, 5* Food Hygiene Rating. Order delivery or dine in.">
+<meta name="theme-color" content="#C1502E">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+<!-- Open Graph / social share -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Musti's Grill & Bistro">
+<meta property="og:title" content="Musti's Grill & Bistro | Authentic Turkish Kebabs, Horley">
+<meta property="og:description" content="Family-run authentic Turkish restaurant on Horley High Street. Kebabs, wraps, burgers, breakfast & mezze. 4.9★ on Google, 5* Food Hygiene Rating.">
+<meta property="og:image" content="/images/cover-fries-chicken.jpg">
+<meta property="og:url" content="/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Musti's Grill & Bistro | Authentic Turkish Kebabs, Horley">
+<meta name="twitter:description" content="Family-run authentic Turkish restaurant on Horley High Street. 4.9★ on Google, 5* Food Hygiene Rating.">
+<meta name="twitter:image" content="/images/cover-fries-chicken.jpg">
+
+<!-- Local business structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Musti's Grill & Bistro",
+  "logo": "/images/apple-touch-icon.png",
+  "image": [
+    "/images/shopfront-exterior.jpg",
+    "/images/mixed-grill-platter.jpg",
+    "/images/lamb-chops.jpg",
+    "/images/beef-burger-chips.jpg",
+    "/images/cover-fries-chicken.jpg"
+  ],
+  "servesCuisine": "Turkish",
+  "priceRange": "££",
+  "currenciesAccepted": "GBP",
+  "telephone": "+447368964617",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "19 High St",
+    "addressLocality": "Horley",
+    "addressRegion": "Surrey",
+    "postalCode": "RH6 7BH",
+    "addressCountry": "GB"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "132",
+    "bestRating": "5"
+  },
+  "menu": "/#menu",
+  "acceptsReservations": "False",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday"], "opens": "08:00", "closes": "16:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "16:00" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF3E6;
+    --cream-2:#F1E6D3;
+    --paper:#FFFDF9;
+    --ink:#2B211A;
+    --ink-soft:#5A4A3D;
+    --terracotta:#C1502E;
+    --terracotta-dark:#9C3E22;
+    --teal:#0E5E63;
+    --teal-dark:#0A454A;
+    --navy:#173B4A;
+    --gold:#C79A3D;
+    --gold-light:#E3C173;
+    --radius:14px;
+    --shadow:0 10px 30px -12px rgba(43,33,26,0.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Work Sans',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;margin:0 0 .4em;line-height:1.15;color:var(--terracotta-dark);}
+  a{color:inherit;}
+  .container{max-width:1140px;margin:0 auto;padding:0 20px;}
+  section{padding:72px 0;position:relative;}
+  .eyebrow{
+    font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--teal);font-weight:600;display:flex;align-items:center;gap:8px;
+    margin-bottom:10px;
+  }
+  .eyebrow .tulip{width:16px;height:16px;flex-shrink:0;}
+  .section-head{max-width:640px;margin:0 auto 40px;text-align:center;}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.4rem);}
+  .section-head p{color:var(--ink-soft);}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 26px;border-radius:100px;font-weight:600;font-size:.98rem;
+    text-decoration:none;border:2px solid transparent;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .2s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:translateY(1px);}
+  .btn-primary{background:var(--terracotta);color:#fff;box-shadow:0 8px 20px -6px rgba(193,80,46,.55);}
+  .btn-primary:hover{background:var(--terracotta-dark);}
+  .btn-outline{background:transparent;border-color:rgba(255,255,255,.75);color:#fff;}
+  .btn-outline:hover{background:rgba(255,255,255,.15);}
+  .btn-teal{background:var(--teal);color:#fff;box-shadow:0 8px 20px -6px rgba(14,94,99,.55);}
+  .btn-teal:hover{background:var(--teal-dark);}
+
+  /* ---------- Tile divider pattern ---------- */
+  .tile-divider{
+    height:34px;width:100%;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='none' stroke='%230E5E63' stroke-opacity='0.35' stroke-width='1.1'%3E%3Cpath d='M22 2 L34 12 L22 22 L10 12 Z'/%3E%3Cpath d='M22 22 L34 32 L22 42 L10 32 Z'/%3E%3Ccircle cx='22' cy='22' r='3.4' stroke='%23C1502E' stroke-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat:repeat-x;background-size:44px 34px;background-position:center;
+    opacity:.9;
+  }
+  .tile-divider.flip{transform:scaleY(-1);}
+
+  /* ---------- Header ---------- */
+  header.site-header{
+    position:fixed;top:0;left:0;right:0;z-index:40;
+    background:rgba(250,243,230,.92);backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(43,33,26,.08);
+  }
+  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1140px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--terracotta-dark);}
+  .brand img{width:34px;height:34px;flex-shrink:0;border-radius:50%;object-fit:cover;}
+  .brand-text{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;line-height:1.1;}
+  .brand-text small{display:block;font-family:'Work Sans',sans-serif;font-weight:500;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);}
+  .header-cta{display:flex;gap:10px;}
+  .header-cta .btn{padding:10px 18px;font-size:.85rem;}
+  .header-call{background:transparent;border:2px solid var(--terracotta);color:var(--terracotta-dark);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;min-height:92vh;display:flex;align-items:flex-end;
+    padding:140px 0 64px;color:#fff;overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:url('images/cover-fries-chicken.jpg') center 30%/cover no-repeat;
+    filter:saturate(1.05);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(23,25,20,.35) 0%, rgba(20,15,10,.55) 55%, rgba(15,10,7,.92) 100%);
+  }
+  .hero-content{position:relative;z-index:2;max-width:680px;}
+  .rating-pill{
+    display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.35);padding:7px 14px;border-radius:100px;
+    font-size:.85rem;font-weight:600;margin-bottom:18px;backdrop-filter:blur(4px);
+  }
+  .rating-pill .stars{color:var(--gold-light);letter-spacing:1px;}
+  .hero h1{color:#fff;font-size:clamp(2.3rem,5.6vw,3.6rem);margin-bottom:.3em;}
+  .hero .tagline{font-size:clamp(1rem,2vw,1.2rem);color:#F3E6CE;max-width:520px;margin-bottom:28px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-address{margin-top:26px;font-size:.9rem;color:#E9DCC4;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .hero-address a{text-decoration:underline;text-decoration-color:rgba(255,255,255,.4);}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;}
+  .about-photo{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--paper);outline:1px solid rgba(199,154,61,.5);}
+  .about-copy h2{font-size:clamp(1.7rem,3.2vw,2.3rem);}
+  .about-copy p{color:var(--ink-soft);}
+  .badge-row{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap;}
+  .badge{
+    display:flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--cream-2);
+    padding:10px 16px;border-radius:100px;font-size:.85rem;font-weight:600;color:var(--teal-dark);
+    box-shadow:0 4px 14px -8px rgba(0,0,0,.25);
+  }
+  .badge svg{width:20px;height:20px;flex-shrink:0;color:var(--gold);}
+
+  @media(min-width:860px){
+    .about-grid{grid-template-columns:0.85fr 1.15fr;}
+  }
+
+  /* ---------- Full Menu ---------- */
+  .menu-nav{
+    display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;margin-bottom:8px;
+    scrollbar-width:none;position:sticky;top:70px;background:var(--cream-2);z-index:5;
+  }
+  .menu-nav::-webkit-scrollbar{display:none;}
+  .menu-nav a{
+    flex-shrink:0;padding:9px 18px;border-radius:100px;background:var(--paper);
+    border:1px solid var(--cream-2);font-size:.85rem;font-weight:600;color:var(--ink-soft);
+    text-decoration:none;white-space:nowrap;transition:background .15s ease, color .15s ease;
+  }
+  .menu-nav a:hover{background:var(--terracotta);color:#fff;border-color:var(--terracotta);}
+  .menu-category{margin-top:44px;scroll-margin-top:118px;}
+  .menu-cat-head{margin-bottom:16px;}
+  .menu-cat-head h3{font-size:1.5rem;display:inline;margin-right:10px;}
+  .menu-cat-head .tr{font-family:'Work Sans',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);}
+  .menu-cat-note{color:var(--ink-soft);font-size:.88rem;margin:6px 0 0;font-style:italic;}
+  .menu-list{background:var(--paper);border-radius:var(--radius);border:1px solid var(--cream-2);box-shadow:0 6px 20px -14px rgba(43,33,26,.25);overflow:hidden;}
+  .menu-item{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:16px 22px;border-bottom:1px solid var(--cream-2);}
+  .menu-item:last-child{border-bottom:none;}
+  @media(min-width:860px){
+    .menu-list{display:grid;grid-template-columns:1fr 1fr;}
+    .menu-item:nth-child(odd){border-right:1px solid var(--cream-2);}
+    .menu-item:nth-last-child(-n+2){border-bottom:none;}
+    .menu-item:last-child:nth-child(odd){border-right:none;}
+  }
+  .menu-item-info{flex:1;min-width:0;}
+  .menu-item-name{font-weight:600;color:var(--ink);}
+  .menu-item-desc{display:block;font-size:.85rem;color:var(--ink-soft);margin-top:3px;line-height:1.4;}
+  .menu-item-price{font-weight:700;color:var(--terracotta-dark);white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .tag{display:inline-block;font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:100px;margin-left:7px;vertical-align:middle;letter-spacing:.03em;}
+  .tag.veg{background:#E4EEDD;color:#3F6B2C;}
+  .tag.vegan{background:#DCEFE4;color:#1F6B4A;}
+  .tag.age{background:#F5E1DA;color:var(--terracotta-dark);}
+  .allergen-notice{
+    margin-top:48px;padding:20px 24px;background:var(--paper);border:1px solid var(--gold-light);
+    border-left:4px solid var(--terracotta);border-radius:var(--radius);
+  }
+  .allergen-notice h4{margin:0 0 8px;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--terracotta-dark);}
+  .allergen-notice p{margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.5;}
+  .menu-disclaimer{text-align:center;margin-top:24px;color:var(--ink-soft);font-size:.82rem;}
+  .menu-cta{text-align:center;margin-top:18px;font-size:.95rem;color:var(--ink-soft);}
+  .menu-cta a{color:var(--terracotta-dark);font-weight:600;}
+  @media(max-width:859px){.menu-nav{top:0;}}
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  @media(min-width:720px){.gallery-grid{grid-template-columns:repeat(3,1fr);}}
+  .arch-frame{
+    background:var(--paper);padding:10px 10px 16px;border-radius:150px 150px 10px 10px;
+    box-shadow:var(--shadow);border:1px solid rgba(199,154,61,.45);position:relative;
+  }
+  .arch-frame .img-wrap{border-radius:140px 140px 4px 4px;overflow:hidden;aspect-ratio:3/4;border:2px solid var(--gold-light);}
+  .arch-frame .img-wrap img{width:100%;height:100%;object-fit:cover;}
+  .arch-frame span{display:block;text-align:center;margin-top:10px;font-size:.78rem;letter-spacing:.05em;color:var(--teal-dark);font-weight:600;text-transform:uppercase;}
+  .gallery-grid > *:nth-child(1){grid-column:span 2;}
+  @media(min-width:720px){.gallery-grid > *:nth-child(1){grid-column:span 1;}}
+
+  /* ---------- Testimonials ---------- */
+  .rating-summary{
+    display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:40px;text-align:center;
+  }
+  .g-badge{
+    display:inline-flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--cream-2);
+    padding:14px 24px;border-radius:100px;box-shadow:0 6px 20px -10px rgba(43,33,26,.3);
+  }
+  .g-badge .gnum{font-size:1.5rem;font-weight:700;color:var(--ink);font-family:'Fraunces',serif;}
+  .g-badge .stars-big{color:var(--gold);font-size:1.1rem;letter-spacing:2px;}
+  .g-badge .g-count{font-size:.85rem;color:var(--ink-soft);}
+  .rating-summary a{font-size:.88rem;font-weight:600;color:var(--teal-dark);text-decoration:underline;}
+  .testi-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+  @media(min-width:720px){.testi-grid{grid-template-columns:repeat(3,1fr);}}
+  .testi-card{
+    background:var(--paper);border:1px solid var(--cream-2);border-radius:var(--radius);
+    padding:24px;box-shadow:0 6px 18px -12px rgba(43,33,26,.25);display:flex;flex-direction:column;gap:14px;
+  }
+  .testi-card .stars{color:var(--gold);letter-spacing:2px;font-size:.95rem;}
+  .testi-card p{margin:0;color:var(--ink);font-size:.94rem;flex:1;}
+  .testi-card footer{font-size:.85rem;font-weight:600;color:var(--teal-dark);}
+  .testi-card footer span{display:block;font-weight:400;color:var(--ink-soft);font-size:.78rem;}
+
+  /* ---------- Hours & Location ---------- */
+  .hl-grid{display:grid;grid-template-columns:1fr;gap:36px;}
+  @media(min-width:900px){.hl-grid{grid-template-columns:1fr 1.15fr;}}
+  .hours-card{background:var(--paper);border-radius:var(--radius);padding:26px 26px 22px;border:1px solid var(--cream-2);box-shadow:0 6px 20px -12px rgba(43,33,26,.25);}
+  .status-line{display:flex;align-items:center;gap:10px;margin-bottom:18px;font-weight:600;}
+  .status-dot{width:10px;height:10px;border-radius:50%;background:#8AA83B;flex-shrink:0;}
+  .status-dot.closed{background:#B23A3A;}
+  table.hours{width:100%;border-collapse:collapse;font-size:.95rem;}
+  table.hours td{padding:8px 4px;border-bottom:1px solid var(--cream-2);color:var(--ink-soft);}
+  table.hours td:last-child{text-align:right;font-weight:600;color:var(--ink);}
+  table.hours tr.today td{color:var(--terracotta-dark);font-weight:700;}
+  table.hours tr.today td:first-child::before{content:"";}
+  .map-card{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--cream-2);min-height:340px;}
+  .map-card iframe{width:100%;height:100%;min-height:340px;border:0;display:block;}
+  .contact-row{margin-top:18px;display:flex;flex-wrap:wrap;gap:12px;}
+
+  /* ---------- Footer ---------- */
+  footer.site-footer{background:var(--navy);color:#EFE6D4;padding:56px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1fr;gap:32px;}
+  @media(min-width:720px){.footer-grid{grid-template-columns:1.2fr 1fr 1fr;}}
+  .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .footer-brand img{width:32px;height:32px;border-radius:50%;object-fit:cover;}
+  .footer-brand span{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:#fff;}
+  footer.site-footer p{color:#C9BFA8;font-size:.9rem;}
+  footer.site-footer h4{color:#fff;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;}
+  footer.site-footer a{color:#EFE6D4;text-decoration:none;font-size:.94rem;display:block;margin-bottom:10px;}
+  footer.site-footer a:hover{color:var(--gold-light);}
+  .social-row{display:flex;gap:12px;margin-top:6px;}
+  .social-row a{
+    width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);
+    display:flex;align-items:center;justify-content:center;margin:0;
+  }
+  .social-row a:hover{background:var(--terracotta);}
+  .social-row svg{width:18px;height:18px;}
+  .footer-note{
+    border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:22px;
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.8rem;color:#9C8F76;
+  }
+  .footer-note .coffee{display:flex;align-items:center;gap:8px;}
+  .footer-note svg{width:16px;height:16px;color:var(--gold);}
+
+  /* ---------- Sticky mobile CTA ---------- */
+  .mobile-cta{
+    position:fixed;bottom:0;left:0;right:0;z-index:50;display:flex;gap:10px;
+    padding:12px 16px;background:var(--paper);border-top:1px solid var(--cream-2);
+    box-shadow:0 -8px 24px -12px rgba(0,0,0,.25);
+  }
+  .mobile-cta .btn{flex:1;padding:13px 10px;font-size:.9rem;}
+  @media(min-width:860px){
+    .mobile-cta{display:none;}
+    .header-cta{display:flex;}
+  }
+  @media(max-width:859px){
+    .header-cta{display:none;}
+    body{padding-bottom:74px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#top">
+      <img src="images/favicon.png" alt="Musti's Grill & Bistro logo" width="34" height="34">
+      <span class="brand-text">Musti's Grill & Bistro<small>Horley, Surrey</small></span>
+    </a>
+    <div class="header-cta">
+      <a class="btn header-call" href="tel:+447368964617">📞 Call Now</a>
+      <a class="btn btn-primary" href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">Order Delivery</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="container hero-content">
+    <div class="rating-pill">
+      <span class="stars">★★★★★</span> 4.9 · 132 Google reviews
+    </div>
+    <h1>Authentic Turkish Grill, Right on Horley High Street</h1>
+    <p class="tagline">Family-run kebabs, wraps, burgers, breakfast and mezze — flame-grilled fresh, served with warmth. 5&#9733; Food Hygiene Rating.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="tel:+447368964617">📞 Call Now</a>
+      <a class="btn btn-outline" href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">Order Delivery</a>
+    </div>
+    <div class="hero-address">
+      📍 19 High St, Horley, Surrey RH6 7BH ·
+      <a href="https://www.google.com/maps/search/?api=1&query=Musti%27s+Grill+%26+Bistro%2C+19+High+St%2C+Horley+RH6+7BH" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+</section>
+
+<div class="tile-divider" aria-hidden="true"></div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-photo">
+      <img src="images/shopfront-exterior.jpg" alt="Musti's Grill & Bistro shopfront on Horley High Street" loading="lazy">
+    </div>
+    <div class="about-copy">
+      <div class="eyebrow">
+        <svg class="tulip" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Our Story
+      </div>
+      <h2>From a Grill Van to Your High Street Table</h2>
+      <p>Musti's Grill & Bistro started small — a family with a mobile grill van and a big love for authentic Turkish flavours. Word spread fast, and today we've grown into a warm, welcoming bistro right here on Horley High Street, serving the same recipes that started it all: flame-grilled kebabs, fresh wraps, hearty breakfasts and homemade cakes.</p>
+      <p>Every plate is still cooked to order by our family, for yours. Pop in for a Turkish coffee, a full breakfast, or a mixed grill shared with friends — you're always welcome at our table.</p>
+      <div class="badge-row">
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          5★ Food Hygiene Rating
+        </div>
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+          Family-Run Since Day One
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tile-divider flip" aria-hidden="true"></div>
+
+<!-- ================= FULL MENU ================= -->
+<section id="menu" style="background:var(--cream-2);">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" style="justify-content:center;">
+        <svg class="tulip" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
+        On the Menu
+      </div>
+      <h2>Our Full Menu</h2>
+      <p>Everything we serve, straight from the grill to the table — or order the same menu for delivery via Just Eat.</p>
+    </div>
+
+    <nav class="menu-nav" aria-label="Menu categories">
+      <a href="#menu-kebabs">Kebabs</a>
+      <a href="#menu-burgers">Burgers</a>
+      <a href="#menu-wraps">Wraps</a>
+      <a href="#menu-sides">Sides</a>
+      <a href="#menu-kids">Kids Meals</a>
+      <a href="#menu-drinks">Drinks</a>
+      <a href="#menu-sweet">Sweet Treat</a>
+      <a href="#menu-sauces">Sauces</a>
+    </nav>
+
+    <!-- Kebabs -->
+    <div class="menu-category" id="menu-kebabs">
+      <div class="menu-cat-head">
+        <h3>Kebabs</h3><span class="tr">Izgara</span>
+        <p class="menu-cat-note">Served with mixed salad and Turkish bread. GF pita available for extra cost.</p>
+      </div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Sis</span><span class="menu-item-desc">Tender cubed lamb, skewered then grilled on the flame</span></div><span class="menu-item-price">from £13.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Sis</span><span class="menu-item-desc">Mouth-watering chicken, skewered, then grilled on the flame</span></div><span class="menu-item-price">from £12.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (8 Pieces)</span><span class="menu-item-desc">Tender, flame-grilled chicken wings packed with flavour</span></div><span class="menu-item-price">£11.50</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (15 Pieces)</span><span class="menu-item-desc">Tender, flame-grilled chicken wings packed with flavour</span></div><span class="menu-item-price">£18.50</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb and Chicken Sis</span><span class="menu-item-desc">Skewers of marinated lamb and chicken, grilled to perfection</span></div><span class="menu-item-price">£20.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Shish and Kofte Shish</span></div><span class="menu-item-price">£19.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mega Mix</span><span class="menu-item-desc">Lamb and chicken sis (6 pieces each), lamb kofte (3 pieces)</span></div><span class="menu-item-price">£28.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Kofte Shish</span><span class="menu-item-desc">Fresh minced lamb, seasoned well with a mixture of herbs and sweet red pepper.</span></div><span class="menu-item-price">from £11.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Veg with Halloumi or Falafel<span class="tag veg">V</span></span><span class="menu-item-desc">Grilled mixed vegetables served with halloumi or falafel — a hearty vegetarian option</span></div><span class="menu-item-price">£11.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Chops (4 Pieces)</span><span class="menu-item-desc">Grilled to perfection with Musti's special seasoning</span></div><span class="menu-item-price">£29.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Family Special (for 4)</span><span class="menu-item-desc">Chicken shish, lamb shish, kofta shish, wings, lamb chops, rice, salad, Turkish bread, chilli and garlic sauce</span></div><span class="menu-item-price">£70.00</span></div>
+      </div>
+    </div>
+
+    <!-- Burgers -->
+    <div class="menu-category" id="menu-burgers">
+      <div class="menu-cat-head">
+        <h3>Burgers</h3>
+        <p class="menu-cat-note">Served with seasoned chips.</p>
+      </div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Chicken Burger</span><span class="menu-item-desc">Marinated overnight to achieve the best possible flavour</span></div><span class="menu-item-price">£12.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger</span><span class="menu-item-desc">8oz of pure beef, flame-grilled, served on a seeded bun</span></div><span class="menu-item-price">£12.50</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi Burger<span class="tag veg">V</span></span><span class="menu-item-desc">Thick slices of grilled halloumi.</span></div><span class="menu-item-price">£11.50</span></div>
+      </div>
+    </div>
+
+    <!-- Wraps -->
+    <div class="menu-category" id="menu-wraps">
+      <div class="menu-cat-head">
+        <h3>Wraps</h3><span class="tr">Dürüm</span>
+        <p class="menu-cat-note">Served with your choice of salad and sauce (upgrade to Turkish bread for extra cost).</p>
+      </div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wrap</span><span class="menu-item-desc">Mouth-watering chicken, skewered, then grilled on the flame</span></div><span class="menu-item-price">from £11.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Kofte Wrap</span><span class="menu-item-desc">Fresh minced lamb, seasoned well with a mixture of herbs</span></div><span class="menu-item-price">£11.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Shish Wrap</span></div><span class="menu-item-price">£12.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken and Halloumi Wrap</span><span class="menu-item-desc">Delicious combination of flavours served fresh off the grill</span></div><span class="menu-item-price">£12.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Halloumi Wrap<span class="tag veg">V</span></span><span class="menu-item-desc">Flame-grilled squeaky cheesy greatness</span></div><span class="menu-item-price">£10.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel Wrap<span class="tag vegan">VE</span></span><span class="menu-item-desc">Served with hummus and your choice of salad</span></div><span class="menu-item-price">£12.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Sis Salad Box</span></div><span class="menu-item-price">£12.50</span></div>
+      </div>
+    </div>
+
+    <!-- Sides -->
+    <div class="menu-category" id="menu-sides">
+      <div class="menu-cat-head">
+        <h3>Sides</h3><span class="tr">Mezeler</span>
+      </div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Borek<span class="tag veg">V</span></span><span class="menu-item-desc">Filo pastry filled with feta cheese and herbs</span></div><span class="menu-item-price">£6.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (6 Pieces)</span><span class="menu-item-desc">Tender, flame-grilled chicken wings packed with flavour</span></div><span class="menu-item-price">£8.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seasoned Chips</span><span class="menu-item-desc">Portion of seasoned chips</span></div><span class="menu-item-price">from £4.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cheesy Chips</span><span class="menu-item-desc">Portion of chips with melted cheese</span></div><span class="menu-item-price">£5.50</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi</span><span class="menu-item-desc">Portion of grilled halloumi</span></div><span class="menu-item-price">£6.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Salad</span></div><span class="menu-item-price">£3.50</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel (4 Pieces)<span class="tag vegan">VE</span></span><span class="menu-item-desc">With hummus</span></div><span class="menu-item-price">£6.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tzatziki (Cacık)</span><span class="menu-item-desc">Natural yoghurt mixed with cucumber, garlic and dry mint</span></div><span class="menu-item-price">£4.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hummus</span><span class="menu-item-desc">Creamy chickpea dip</span></div><span class="menu-item-price">£4.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Marinated Pitted Green Olives</span><span class="menu-item-desc">Green olives marinated in herbs and olive oil</span></div><span class="menu-item-price">£5.50</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Extra Portion of Bread (GF Available)</span><span class="menu-item-desc">Freshly prepared</span></div><span class="menu-item-price">£3.50</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Turkish Sausage (Sucuk)</span><span class="menu-item-desc">Spicy grilled beef sausage</span></div><span class="menu-item-price">£5.50</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Rice<span class="tag veg">V</span></span><span class="menu-item-desc">Traditional Turkish bulgur rice cooked in tomato sauce with onions and seasonings</span></div><span class="menu-item-price">£4.50</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Feta Cheese</span><span class="menu-item-desc">Traditional Turkish white soft cheese</span></div><span class="menu-item-price">£4.50</span></div>
+      </div>
+    </div>
+
+    <!-- Kids Meals -->
+    <div class="menu-category" id="menu-kids">
+      <div class="menu-cat-head">
+        <h3>Kids Meals</h3>
+        <p class="menu-cat-note">Kids meals come with an apple and blackcurrant fruit shoot (200ml).</p>
+      </div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Nuggets x5 With Chips</span></div><span class="menu-item-price">£8.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Sis x5 With Chips</span></div><span class="menu-item-price">£8.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Sis x5 With Chips</span></div><span class="menu-item-price">£9.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger With Chips</span></div><span class="menu-item-price">£8.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kids Chicken Shish Wrap With Chips</span></div><span class="menu-item-price">£8.00</span></div>
+      </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="menu-category" id="menu-drinks">
+      <div class="menu-cat-head">
+        <h3>Drinks</h3><span class="tr">İçecekler</span>
+      </div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Coca-Cola Original Taste (330ml Can)</span><span class="menu-item-desc">Sparkling soft drink with plant extracts</span></div><span class="menu-item-price">£2.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Diet Coke (330ml Can)</span><span class="menu-item-desc">Sparkling low-calorie soft drink with plant extracts and sweeteners</span></div><span class="menu-item-price">£2.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Coca-Cola Zero Sugar (330ml)</span><span class="menu-item-desc">Sparkling low-calorie soft drink with plant extracts and sweeteners</span></div><span class="menu-item-price">£2.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pepsi (330ml)</span><span class="menu-item-desc">Carbonated cola-flavoured soft drink with sugar and sweeteners</span></div><span class="menu-item-price">£2.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pepsi Max (330ml)</span><span class="menu-item-desc">Carbonated low-calorie cola-flavoured soft drink with sweeteners</span></div><span class="menu-item-price">£2.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Rio (330ml)</span></div><span class="menu-item-price">£2.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sprite Lemon Lime (330ml Can)</span><span class="menu-item-desc">Sparkling lemon-lime low-calorie soft drink with sugar and sweeteners</span></div><span class="menu-item-price">£2.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Water (500ml)</span></div><span class="menu-item-price">£2.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Ayran (300ml)</span><span class="menu-item-desc">Traditional yoghurt-based drink</span></div><span class="menu-item-price">£3.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Salgam (300ml)</span><span class="menu-item-desc">Traditional vegetable-based drink</span></div><span class="menu-item-price">£3.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fruit Shoot Apple &amp; Blackcurrant (200ml)</span></div><span class="menu-item-price">£1.75</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Red Bull Energy Drink (250ml)</span><span class="menu-item-desc">Energy drink</span></div><span class="menu-item-price">£2.75</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (330ml)<span class="tag age">18+</span></span><span class="menu-item-desc">5% vol</span></div><span class="menu-item-price">£4.50</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (500ml)<span class="tag age">18+</span></span><span class="menu-item-desc">5% vol</span></div><span class="menu-item-price">£6.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lipton Peach Ice Tea (500ml)</span><span class="menu-item-desc">Still soft drink with tea extract and peach juice, sugars and sweetener</span></div><span class="menu-item-price">£3.20</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lipton Lemon Ice Tea (500ml)</span><span class="menu-item-desc">Still soft drink with tea extract and lemon juice, sugars and sweetener</span></div><span class="menu-item-price">£3.20</span></div>
+      </div>
+    </div>
+
+    <!-- Sweet Treat -->
+    <div class="menu-category" id="menu-sweet">
+      <div class="menu-cat-head">
+        <h3>Sweet Treat</h3><span class="tr">Tatlı</span>
+      </div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Baklava (4 Pieces)</span><span class="menu-item-desc">Layered filo pastry with nuts and sweet syrup — a rich Turkish treat</span></div><span class="menu-item-price">£6.00</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Millionaire Shortbread</span><span class="menu-item-desc">A buttery shortbread base topped with caramel and chocolate</span></div><span class="menu-item-price">£3.60</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Flapjack</span><span class="menu-item-desc">Made with oats and syrup — simple and tasty</span></div><span class="menu-item-price">£3.60</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Rocky Road with Marshmallows</span><span class="menu-item-desc">Crunchy chocolate squares loaded with marshmallows and biscuit pieces</span></div><span class="menu-item-price">£3.60</span></div>
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Italian Cannoli</span><span class="menu-item-desc">Crispy pastry filled with sweet</span></div><span class="menu-item-price">£2.10</span></div>
+      </div>
+    </div>
+
+    <!-- Sauces -->
+    <div class="menu-category" id="menu-sauces">
+      <div class="menu-cat-head">
+        <h3>Sauces</h3><span class="tr">Soslar</span>
+      </div>
+      <div class="menu-list">
+        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Extra Pot Sauces</span><span class="menu-item-desc">Pot of sauce</span></div><span class="menu-item-price">£1.20</span></div>
+      </div>
+    </div>
+
+    <div class="allergen-notice">
+      <h4>Allergen &amp; Dietary Information</h4>
+      <p>Our kitchen handles all 14 major allergens, including gluten, nuts, dairy, sesame and shellfish. If you have a food allergy or intolerance, please tell a member of staff before ordering — full allergen information for every dish is available on request, in person or by calling <a href="tel:+447368964617" style="color:var(--terracotta-dark);font-weight:600;">+44 7368 964617</a>.</p>
+    </div>
+
+    <p class="menu-cta">Order this menu for delivery: <a href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">via Just Eat →</a></p>
+    <p class="menu-disclaimer">Prices correct as of 20 July 2026 — please confirm with staff for the latest menu.</p>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" style="justify-content:center;">
+        <svg class="tulip" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
+        A Look Inside
+      </div>
+      <h2>From Our Grill to Your Plate</h2>
+      <p>Real photos from our bistro and kitchen on Horley High Street.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="arch-frame">
+        <div class="img-wrap"><img src="images/shopfront-exterior.jpg" alt="Musti's Grill & Bistro shopfront and outdoor seating" loading="lazy"></div>
+        <span>Our Bistro</span>
+      </div>
+      <div class="arch-frame">
+        <div class="img-wrap"><img src="images/mixed-grill-platter.jpg" alt="Mixed grill platter with falafel, salad and rice" loading="lazy"></div>
+        <span>Mixed Grill</span>
+      </div>
+      <div class="arch-frame">
+        <div class="img-wrap"><img src="images/lamb-chops.jpg" alt="Flame-grilled lamb chops" loading="lazy"></div>
+        <span>Lamb Chops</span>
+      </div>
+      <div class="arch-frame">
+        <div class="img-wrap"><img src="images/beef-burger-chips.jpg" alt="Beef burger with chips" loading="lazy"></div>
+        <span>Burgers</span>
+      </div>
+      <div class="arch-frame">
+        <div class="img-wrap"><img src="images/cover-fries-chicken.jpg" alt="Kebab platter with chips and tzatziki" loading="lazy"></div>
+        <span>Kebab Platter</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tile-divider" aria-hidden="true"></div>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="reviews" style="background:var(--cream-2);">
+  <div class="container">
+    <div class="rating-summary">
+      <div class="g-badge">
+        <span class="gnum">4.9</span>
+        <span class="stars-big">★★★★★</span>
+        <span class="g-count">132 Google reviews</span>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Musti%27s+Grill+%26+Bistro%2C+19+High+St%2C+Horley+RH6+7BH" target="_blank" rel="noopener">Read more on Google →</a>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Amazing service, delicious food. Will definitely come again."</p>
+        <footer>Suzanne Cox<span>Google review</span></footer>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"We popped in for a dinner date and it was fab — lovely chilled atmosphere, delicious food."</p>
+        <footer>Jennifer Arnold<span>Google review</span></footer>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Love coming to Mustis! Always great service and fabulous food. So glad to have such a great local for breakfast, lunch & dinner."</p>
+        <footer>Jade Goodes<span>Google review</span></footer>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Had an amazing evening here for a birthday party — staff looked after our group exceptionally well, food was outstanding."</p>
+        <footer>Archie Condon<span>Google review</span></footer>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"100% recommend. Coffee is amazing, food is delicious and staff are so friendly."</p>
+        <footer>Xtina<span>Google review</span></footer>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"They very kindly made a plain omelette and chips for my disabled parents even though it wasn't on the evening menu — went above and beyond."</p>
+        <footer>Gilly Barnes<span>Google review</span></footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOURS & LOCATION ================= -->
+<section id="visit">
+  <div class="container hl-grid">
+    <div>
+      <div class="eyebrow">
+        <svg class="tulip" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
+        Visit Us
+      </div>
+      <h2>Hours &amp; Location</h2>
+      <div class="hours-card">
+        <div class="status-line">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusText">Checking hours…</span>
+        </div>
+        <table class="hours" id="hoursTable">
+          <tr data-day="1"><td>Monday</td><td>8:00 AM – 4:00 PM</td></tr>
+          <tr data-day="2"><td>Tuesday</td><td>8:00 AM – 4:00 PM</td></tr>
+          <tr data-day="3"><td>Wednesday</td><td>8:00 AM – 10:00 PM</td></tr>
+          <tr data-day="4"><td>Thursday</td><td>8:00 AM – 10:00 PM</td></tr>
+          <tr data-day="5"><td>Friday</td><td>8:00 AM – 10:00 PM</td></tr>
+          <tr data-day="6"><td>Saturday</td><td>8:00 AM – 10:00 PM</td></tr>
+          <tr data-day="0"><td>Sunday</td><td>9:00 AM – 4:00 PM</td></tr>
+        </table>
+        <div class="contact-row">
+          <a class="btn btn-teal" href="tel:+447368964617">📞 +44 7368 964617</a>
+          <a class="btn" style="background:var(--paper);border:2px solid var(--cream-2);color:var(--ink);" href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">Order Delivery</a>
+        </div>
+      </div>
+    </div>
+    <div class="map-card">
+      <iframe src="https://www.google.com/maps?q=19+High+St,+Horley+RH6+7BH&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Musti's Grill & Bistro, 19 High St, Horley RH6 7BH"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="images/favicon.png" alt="Musti's Grill & Bistro logo" width="32" height="32">
+        <span>Musti's Grill &amp; Bistro</span>
+      </div>
+      <p>Authentic Turkish kebabs, wraps, burgers &amp; breakfast — family-run on Horley High Street since we swapped our grill van for four walls.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/mustis.grill/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.5-3H13.5V8.25c0-.87.24-1.46 1.5-1.46H16.5V4.14C16.03 4.08 14.98 4 13.9 4 11.2 4 9.5 5.6 9.5 8.4v2.1H7V13.5h2.5V21h4z"/></svg></a>
+        <a href="https://www.instagram.com/mustis.grill/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <a href="https://www.google.com/maps/search/?api=1&query=Musti%27s+Grill+%26+Bistro%2C+19+High+St%2C+Horley+RH6+7BH" target="_blank" rel="noopener">19 High St, Horley,<br>Surrey RH6 7BH</a>
+      <a href="tel:+447368964617">+44 7368 964617</a>
+    </div>
+    <div>
+      <h4>Order &amp; Reviews</h4>
+      <a href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">Order on Just Eat</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Musti%27s+Grill+%26+Bistro%2C+19+High+St%2C+Horley+RH6+7BH" target="_blank" rel="noopener">4.9★ · 132 Google reviews</a>
+    </div>
+  </div>
+  <div class="container footer-note">
+    <span>© <span id="year"></span> Musti's Grill & Bistro. All rights reserved.</span>
+    <span class="coffee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h13a2 2 0 010 4h-1M4 8v7a3 3 0 003 3h6a3 3 0 003-3v-2M8 3c0 1-1 1-1 2s1 1 1 2M12 3c0 1-1 1-1 2s1 1 1 2"/></svg> Şerefe — good coffee, good company.</span>
+  </div>
+</footer>
+
+<!-- ================= STICKY MOBILE CTA ================= -->
+<div class="mobile-cta">
+  <a class="btn btn-primary" href="tel:+447368964617">📞 Call Now</a>
+  <a class="btn btn-teal" href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">Order Delivery</a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  (function(){
+    var hours = {
+      0:{open:9,close:16},
+      1:{open:8,close:16},
+      2:{open:8,close:16},
+      3:{open:8,close:22},
+      4:{open:8,close:22},
+      5:{open:8,close:22},
+      6:{open:8,close:22}
+    };
+    var now = new Date();
+    var day = now.getDay();
+    var h = now.getHours() + now.getMinutes()/60;
+    var today = hours[day];
+    var isOpen = h >= today.open && h < today.close;
+
+    var dot = document.getElementById('statusDot');
+    var text = document.getElementById('statusText');
+    if(isOpen){
+      dot.classList.remove('closed');
+      var closeH = today.close % 12 === 0 ? 12 : today.close % 12;
+      var closeSuffix = today.close >= 12 ? 'PM' : 'AM';
+      text.textContent = 'Open now · closes ' + closeH + ':00 ' + closeSuffix;
+    } else {
+      dot.classList.add('closed');
+      text.textContent = 'Closed now';
+    }
+
+    var row = document.querySelector('#hoursTable tr[data-day="' + day + '"]');
+    if(row) row.classList.add('today');
+  })();
+</script>
+
+<!-- Vercel Web Analytics: cookie-free, no account signup needed beyond enabling
+     "Web Analytics" in the Vercel project dashboard after deploy. No-op until then. -->
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
