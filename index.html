@@ -366,7 +366,7 @@
   footer.site-footer a{color:#EFE6D4;text-decoration:none;font-size:.94rem;display:block;margin-bottom:10px;}
   footer.site-footer a:hover{color:var(--gold-light);}
   .social-row{display:flex;gap:12px;margin-top:6px;}
-  .social-row a{
+  footer.site-footer .social-row a{
     width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);
     display:flex;align-items:center;justify-content:center;margin:0;
   }
@@ -718,36 +718,90 @@
       </div>
       <a href="https://www.google.com/maps/search/?api=1&query=Musti%27s+Grill+%26+Bistro%2C+19+High+St%2C+Horley+RH6+7BH" target="_blank" rel="noopener">Read more on Google →</a>
     </div>
-    <div class="testi-grid">
-      <div class="testi-card">
+    <div class="testi-grid" id="testiGrid">
+      <!-- Set 0 -->
+      <div class="testi-card" data-set="0">
         <div class="stars">★★★★★</div>
         <p>"Amazing service, delicious food. Will definitely come again."</p>
         <footer>Suzanne Cox<span>Google review</span></footer>
       </div>
-      <div class="testi-card">
+      <div class="testi-card" data-set="0">
+        <div class="stars">★★★★★</div>
+        <p>"The food was absolutely amazing! Everything was fresh, flavorful, and perfectly cooked. The atmosphere was warm and welcoming, and the staff were friendly."</p>
+        <footer>Ilia Iliev<span>Google review</span></footer>
+      </div>
+      <div class="testi-card" data-set="0">
+        <div class="stars">★★★★★</div>
+        <p>"We've always enjoyed this place for takeaway, so we decided to dine in for my son's birthday. The food was great, as was the service."</p>
+        <footer>Diana Loizou<span>Google review</span></footer>
+      </div>
+
+      <!-- Set 1 -->
+      <div class="testi-card" data-set="1">
         <div class="stars">★★★★★</div>
         <p>"We popped in for a dinner date and it was fab — lovely chilled atmosphere, delicious food."</p>
         <footer>Jennifer Arnold<span>Google review</span></footer>
       </div>
-      <div class="testi-card">
+      <div class="testi-card" data-set="1">
+        <div class="stars">★★★★★</div>
+        <p>"One of the best places to eat in Horley. Fresh, full of flavour, generous portions — the Turkish dishes are authentic and perfectly cooked."</p>
+        <footer>Ahmet<span>Google review</span></footer>
+      </div>
+      <div class="testi-card" data-set="1">
+        <div class="stars">★★★★★</div>
+        <p>"The best wraps we have ever had! Highly recommended."</p>
+        <footer>Terry<span>Google review</span></footer>
+      </div>
+
+      <!-- Set 2 -->
+      <div class="testi-card" data-set="2">
         <div class="stars">★★★★★</div>
         <p>"Love coming to Mustis! Always great service and fabulous food. So glad to have such a great local for breakfast, lunch & dinner."</p>
         <footer>Jade Goodes<span>Google review</span></footer>
       </div>
-      <div class="testi-card">
+      <div class="testi-card" data-set="2">
+        <div class="stars">★★★★★</div>
+        <p>"The food was great 10/10. The decor is beautiful and creates such a lovely atmosphere. Highly recommend coming for breakfast and trying the sweet treat."</p>
+        <footer>Kerrie W<span>Google review</span></footer>
+      </div>
+      <div class="testi-card" data-set="2">
+        <div class="stars">★★★★★</div>
+        <p>"Came to Musti's during my stay in Horley from Birmingham — one of the best places I've ever eaten at. Everything cooked to perfection."</p>
+        <footer>Hassan Gulzar<span>Google review</span></footer>
+      </div>
+
+      <!-- Set 3 -->
+      <div class="testi-card" data-set="3">
         <div class="stars">★★★★★</div>
         <p>"Had an amazing evening here for a birthday party — staff looked after our group exceptionally well, food was outstanding."</p>
         <footer>Archie Condon<span>Google review</span></footer>
       </div>
-      <div class="testi-card">
+      <div class="testi-card" data-set="3">
+        <div class="stars">★★★★★</div>
+        <p>"Had our football team's Christmas social here and the food was absolutely delicious. Service was incredible, staff were really attentive."</p>
+        <footer>Samantha Wilby<span>Google review</span></footer>
+      </div>
+      <div class="testi-card" data-set="3">
+        <div class="stars">★★★★★</div>
+        <p>"A wonderful restaurant. Beautifully presented food, and the chef has real talent. Highly recommend."</p>
+        <footer>Shah K<span>Google review</span></footer>
+      </div>
+
+      <!-- Set 4 -->
+      <div class="testi-card" data-set="4">
         <div class="stars">★★★★★</div>
         <p>"100% recommend. Coffee is amazing, food is delicious and staff are so friendly."</p>
         <footer>Xtina<span>Google review</span></footer>
       </div>
-      <div class="testi-card">
+      <div class="testi-card" data-set="4">
         <div class="stars">★★★★★</div>
         <p>"They very kindly made a plain omelette and chips for my disabled parents even though it wasn't on the evening menu — went above and beyond."</p>
         <footer>Gilly Barnes<span>Google review</span></footer>
+      </div>
+      <div class="testi-card" data-set="4">
+        <div class="stars">★★★★★</div>
+        <p>"Really lovely food here and the owner is so down to earth. Breakfast is always a hit, especially when it's made by the owner."</p>
+        <footer>Mary Iheke<span>Google review</span></footer>
       </div>
     </div>
   </div>
@@ -940,6 +994,29 @@
     }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
 
     sections.forEach(function(s){ observer.observe(s); });
+  })();
+
+  (function(){
+    var grid = document.getElementById('testiGrid');
+    if(!grid) return;
+    var cards = Array.from(grid.querySelectorAll('.testi-card'));
+    if(!cards.length) return;
+
+    // Day-of-year using the visitor's LOCAL calendar date (not UTC), so the
+    // set changes at local midnight rather than UTC midnight. Constructing
+    // both dates via Date.UTC() from local Y/M/D components (with no time-of-day)
+    // gives an exact whole-day difference with no DST edge cases.
+    var today = new Date();
+    var startOfYear = Date.UTC(today.getFullYear(), 0, 1);
+    var todayAtMidnight = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+    var dayOfYear = Math.round((todayAtMidnight - startOfYear) / 86400000);
+    var totalSets = 5;
+    var activeSet = dayOfYear % totalSets;
+
+    cards.forEach(function(card){
+      var isActive = card.getAttribute('data-set') === String(activeSet);
+      card.style.display = isActive ? '' : 'none';
+    });
   })();
 </script>
 
