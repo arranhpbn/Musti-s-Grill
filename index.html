@@ -3,24 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Musti's Grill & Bistro | Authentic Turkish Kebabs, Horley</title>
-<meta name="description" content="Musti's Grill & Bistro — family-run authentic Turkish restaurant on Horley High Street. Kebabs, wraps, burgers, breakfast & mezze. 4.9★ on Google, 5* Food Hygiene Rating. Order delivery or dine in.">
+<title>Musti's Grill & Bistro | Turkish Restaurant in Horley, Surrey</title>
+<meta name="description" content="Musti's Grill & Bistro — family-run Turkish grill on Horley High Street. 4.9★ rated, 132 Google reviews. Call for takeaway or dine in.">
 <meta name="theme-color" content="#C1502E">
-<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="canonical" href="https://mustisgrill.co.uk/">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="icon" href="images/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
 <!-- Open Graph / social share -->
-<meta property="og:type" content="website">
+<meta property="og:type" content="restaurant">
 <meta property="og:site_name" content="Musti's Grill & Bistro">
-<meta property="og:title" content="Musti's Grill & Bistro | Authentic Turkish Kebabs, Horley">
-<meta property="og:description" content="Family-run authentic Turkish restaurant on Horley High Street. Kebabs, wraps, burgers, breakfast & mezze. 4.9★ on Google, 5* Food Hygiene Rating.">
-<meta property="og:image" content="/images/cover-fries-chicken.jpg">
-<meta property="og:url" content="/">
+<meta property="og:title" content="Musti's Grill & Bistro | Turkish Restaurant in Horley, Surrey">
+<meta property="og:description" content="Family-run Turkish grill on Horley High Street. 4.9★ rated, 132 Google reviews. Call for takeaway or dine in.">
+<meta property="og:image" content="https://mustisgrill.co.uk/images/cover-fries-chicken.jpg">
+<meta property="og:image:width" content="960">
+<meta property="og:image:height" content="808">
+<meta property="og:url" content="https://mustisgrill.co.uk/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Musti's Grill & Bistro | Authentic Turkish Kebabs, Horley">
-<meta name="twitter:description" content="Family-run authentic Turkish restaurant on Horley High Street. 4.9★ on Google, 5* Food Hygiene Rating.">
-<meta name="twitter:image" content="/images/cover-fries-chicken.jpg">
+<meta name="twitter:title" content="Musti's Grill & Bistro | Turkish Restaurant in Horley, Surrey">
+<meta name="twitter:description" content="Family-run Turkish grill on Horley High Street. 4.9★ rated, 132 Google reviews. Call for takeaway or dine in.">
+<meta name="twitter:image" content="https://mustisgrill.co.uk/images/cover-fries-chicken.jpg">
 
 <!-- Local business structured data -->
 <script type="application/ld+json">
@@ -28,16 +34,17 @@
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Musti's Grill & Bistro",
-  "logo": "/images/apple-touch-icon.png",
+  "url": "https://mustisgrill.co.uk/",
+  "logo": "https://mustisgrill.co.uk/images/apple-touch-icon.png",
   "image": [
-    "/images/shopfront-exterior.jpg",
-    "/images/mixed-grill-platter.jpg",
-    "/images/lamb-chops.jpg",
-    "/images/beef-burger-chips.jpg",
-    "/images/cover-fries-chicken.jpg"
+    "https://mustisgrill.co.uk/images/shopfront-exterior.jpg",
+    "https://mustisgrill.co.uk/images/mixed-grill-platter.jpg",
+    "https://mustisgrill.co.uk/images/lamb-chops.jpg",
+    "https://mustisgrill.co.uk/images/beef-burger-chips.jpg",
+    "https://mustisgrill.co.uk/images/cover-fries-chicken.jpg"
   ],
   "servesCuisine": "Turkish",
-  "priceRange": "££",
+  "priceRange": "£10-£20",
   "currenciesAccepted": "GBP",
   "telephone": "+447368964617",
   "address": {
@@ -54,8 +61,8 @@
     "reviewCount": "132",
     "bestRating": "5"
   },
-  "menu": "/#menu",
-  "acceptsReservations": "False",
+  "menu": "https://mustisgrill.co.uk/#menu",
+  "acceptsReservations": false,
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday"], "opens": "08:00", "closes": "16:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "22:00" },
@@ -66,7 +73,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream:#FAF3E6;
@@ -81,6 +88,7 @@
     --navy:#173B4A;
     --gold:#C79A3D;
     --gold-light:#E3C173;
+    --gold-deep:#8E6D29;
     --radius:14px;
     --shadow:0 10px 30px -12px rgba(43,33,26,0.35);
   }
@@ -88,18 +96,26 @@
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    font-family:'Work Sans',system-ui,sans-serif;
+    font-family:'Public Sans',system-ui,sans-serif;
+    font-weight:400;
     color:var(--ink);
     background:var(--cream);
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
   }
-  img{max-width:100%;display:block;}
+  img{max-width:100%;height:auto;display:block;}
   h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;margin:0 0 .4em;line-height:1.15;color:var(--terracotta-dark);}
   a{color:inherit;}
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
+    outline:2px solid #fff;
+    outline-offset:2px;
+    box-shadow:0 0 0 4px var(--terracotta);
+    border-radius:4px;
+  }
   .container{max-width:1140px;margin:0 auto;padding:0 20px;}
-  section{padding:72px 0;position:relative;}
+  section{padding:72px 0;position:relative;scroll-margin-top:82px;}
   .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
     font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;
     color:var(--teal);font-weight:600;display:flex;align-items:center;gap:8px;
     margin-bottom:10px;
@@ -118,7 +134,7 @@
   .btn:active{transform:translateY(1px);}
   .btn-primary{background:var(--terracotta);color:#fff;box-shadow:0 8px 20px -6px rgba(193,80,46,.55);}
   .btn-primary:hover{background:var(--terracotta-dark);}
-  .btn-outline{background:transparent;border-color:rgba(255,255,255,.75);color:#fff;}
+  .btn-outline{background:rgba(0,0,0,.15);border-color:rgba(255,255,255,.8);color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.4);}
   .btn-outline:hover{background:rgba(255,255,255,.15);}
   .btn-teal{background:var(--teal);color:#fff;box-shadow:0 8px 20px -6px rgba(14,94,99,.55);}
   .btn-teal:hover{background:var(--teal-dark);}
@@ -138,14 +154,60 @@
     background:rgba(250,243,230,.92);backdrop-filter:blur(6px);
     border-bottom:1px solid rgba(43,33,26,.08);
   }
-  .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1140px;margin:0 auto;}
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--terracotta-dark);}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 20px;max-width:1140px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--terracotta-dark);flex-shrink:0;}
   .brand img{width:34px;height:34px;flex-shrink:0;border-radius:50%;object-fit:cover;}
   .brand-text{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;line-height:1.1;}
-  .brand-text small{display:block;font-family:'Work Sans',sans-serif;font-weight:500;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);}
-  .header-cta{display:flex;gap:10px;}
-  .header-cta .btn{padding:10px 18px;font-size:.85rem;}
-  .header-call{background:transparent;border:2px solid var(--terracotta);color:var(--terracotta-dark);}
+  .brand-text small{display:block;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);}
+  .header-cta{display:flex;gap:10px;flex-shrink:0;}
+  .header-cta .btn{padding:10px 18px;font-size:.85rem;white-space:nowrap;}
+
+  /* Desktop section nav — same row as brand/CTA */
+  .site-nav{
+    display:flex;gap:18px;align-items:center;flex-wrap:nowrap;
+  }
+  .site-nav a{
+    font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.74rem;
+    letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);
+    text-decoration:none;white-space:nowrap;padding:4px 1px;border-bottom:2px solid transparent;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  .site-nav a:hover{color:var(--terracotta-dark);}
+  .site-nav a.active{color:var(--terracotta-dark);border-bottom-color:var(--terracotta);}
+
+  /* Mobile hamburger toggle */
+  .nav-toggle{
+    display:none;background:transparent;border:none;cursor:pointer;padding:0;
+    width:40px;height:40px;align-items:center;justify-content:center;
+    color:var(--terracotta-dark);flex-shrink:0;border-radius:8px;
+  }
+  .nav-toggle svg{width:24px;height:24px;}
+  .nav-toggle .icon-close{display:none;}
+  .nav-toggle.open .icon-burger{display:none;}
+  .nav-toggle.open .icon-close{display:block;}
+
+  /* Mobile dropdown nav */
+  .mobile-nav{
+    display:none;flex-direction:column;
+    background:var(--paper);border-top:1px solid var(--cream-2);
+  }
+  .mobile-nav.open{display:flex;}
+  .mobile-nav a{
+    font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.9rem;
+    letter-spacing:.03em;text-transform:uppercase;color:var(--ink);
+    text-decoration:none;min-height:44px;display:flex;align-items:center;
+    padding:0 20px;border-bottom:1px solid var(--cream-2);
+  }
+  .mobile-nav a:last-child{border-bottom:none;}
+  .mobile-nav a.active{color:var(--terracotta-dark);background:var(--cream-2);}
+
+  @media(max-width:1023px){
+    .site-nav{display:none;}
+    .nav-toggle{display:flex;}
+  }
+  @media(min-width:1024px){
+    .mobile-nav{display:none !important;}
+  }
 
   /* ---------- Hero ---------- */
   .hero{
@@ -163,15 +225,17 @@
   }
   .hero-content{position:relative;z-index:2;max-width:680px;}
   .rating-pill{
-    display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.35);padding:7px 14px;border-radius:100px;
+    font-family:'IBM Plex Mono',monospace;
+    display:inline-flex;align-items:center;gap:8px;background:rgba(255,253,249,.94);
+    border:1px solid rgba(255,255,255,.7);padding:7px 14px;border-radius:100px;
     font-size:.85rem;font-weight:600;margin-bottom:18px;backdrop-filter:blur(4px);
+    color:var(--ink);box-shadow:0 4px 14px -6px rgba(0,0,0,.35);
   }
-  .rating-pill .stars{color:var(--gold-light);letter-spacing:1px;}
-  .hero h1{color:#fff;font-size:clamp(2.3rem,5.6vw,3.6rem);margin-bottom:.3em;}
-  .hero .tagline{font-size:clamp(1rem,2vw,1.2rem);color:#F3E6CE;max-width:520px;margin-bottom:28px;}
+  .rating-pill .stars{color:var(--gold-deep);letter-spacing:1px;}
+  .hero h1{color:#fff;font-weight:700;font-size:clamp(2.3rem,5.6vw,3.6rem);margin-bottom:.3em;text-shadow:0 2px 10px rgba(0,0,0,.45);}
+  .hero .tagline{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(1rem,2vw,1.2rem);color:#F3E6CE;max-width:520px;margin-bottom:28px;text-shadow:0 1px 6px rgba(0,0,0,.5);}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
-  .hero-address{margin-top:26px;font-size:.9rem;color:#E9DCC4;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .hero-address{margin-top:26px;font-size:.9rem;color:#E9DCC4;display:flex;align-items:center;gap:8px;flex-wrap:wrap;text-shadow:0 1px 5px rgba(0,0,0,.5);}
   .hero-address a{text-decoration:underline;text-decoration-color:rgba(255,255,255,.4);}
 
   /* ---------- About ---------- */
@@ -185,7 +249,7 @@
     padding:10px 16px;border-radius:100px;font-size:.85rem;font-weight:600;color:var(--teal-dark);
     box-shadow:0 4px 14px -8px rgba(0,0,0,.25);
   }
-  .badge svg{width:20px;height:20px;flex-shrink:0;color:var(--gold);}
+  .badge svg{width:20px;height:20px;flex-shrink:0;color:var(--gold-deep);}
 
   @media(min-width:860px){
     .about-grid{grid-template-columns:0.85fr 1.15fr;}
@@ -194,20 +258,21 @@
   /* ---------- Full Menu ---------- */
   .menu-nav{
     display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;margin-bottom:8px;
-    scrollbar-width:none;position:sticky;top:70px;background:var(--cream-2);z-index:5;
+    scrollbar-width:none;position:sticky;top:82px;background:var(--cream-2);z-index:5;
   }
   .menu-nav::-webkit-scrollbar{display:none;}
   .menu-nav a{
+    font-family:'IBM Plex Mono',monospace;
     flex-shrink:0;padding:9px 18px;border-radius:100px;background:var(--paper);
     border:1px solid var(--cream-2);font-size:.85rem;font-weight:600;color:var(--ink-soft);
     text-decoration:none;white-space:nowrap;transition:background .15s ease, color .15s ease;
   }
   .menu-nav a:hover{background:var(--terracotta);color:#fff;border-color:var(--terracotta);}
   .menu-nav a.active{background:var(--terracotta);color:#fff;border-color:var(--terracotta);}
-  .menu-category{margin-top:44px;scroll-margin-top:118px;}
+  .menu-category{margin-top:44px;scroll-margin-top:145px;}
   .menu-cat-head{margin-bottom:16px;}
   .menu-cat-head h3{font-size:1.5rem;display:inline;margin-right:10px;}
-  .menu-cat-head .tr{font-family:'Work Sans',sans-serif;font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);}
+  .menu-cat-head .tr{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);}
   .menu-cat-note{color:var(--ink-soft);font-size:.88rem;margin:6px 0 0;font-style:italic;}
   .menu-list{background:var(--paper);border-radius:var(--radius);border:1px solid var(--cream-2);box-shadow:0 6px 20px -14px rgba(43,33,26,.25);overflow:hidden;}
   .menu-item{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:16px 22px;border-bottom:1px solid var(--cream-2);}
@@ -219,9 +284,9 @@
     .menu-item:last-child:nth-child(odd){border-right:none;}
   }
   .menu-item-info{flex:1;min-width:0;}
-  .menu-item-name{font-weight:600;color:var(--ink);}
+  .menu-item-name{font-family:'Public Sans',sans-serif;font-weight:600;color:var(--ink);}
   .menu-item-desc{display:block;font-size:.85rem;color:var(--ink-soft);margin-top:3px;line-height:1.4;}
-  .menu-item-price{font-weight:700;color:var(--terracotta-dark);white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .menu-item-price{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--terracotta-dark);white-space:nowrap;font-variant-numeric:tabular-nums;}
   .tag{display:inline-block;font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:100px;margin-left:7px;vertical-align:middle;letter-spacing:.03em;}
   .tag.veg{background:#E4EEDD;color:#3F6B2C;}
   .tag.vegan{background:#DCEFE4;color:#1F6B4A;}
@@ -246,7 +311,7 @@
   }
   .arch-frame .img-wrap{border-radius:140px 140px 4px 4px;overflow:hidden;aspect-ratio:3/4;border:2px solid var(--gold-light);}
   .arch-frame .img-wrap img{width:100%;height:100%;object-fit:cover;}
-  .arch-frame span{display:block;text-align:center;margin-top:10px;font-size:.78rem;letter-spacing:.05em;color:var(--teal-dark);font-weight:600;text-transform:uppercase;}
+  .arch-frame span{font-family:'IBM Plex Mono',monospace;display:block;text-align:center;margin-top:10px;font-size:.78rem;letter-spacing:.05em;color:var(--teal-dark);font-weight:600;text-transform:uppercase;}
   .gallery-grid > *:nth-child(1){grid-column:span 2;}
   @media(min-width:720px){.gallery-grid > *:nth-child(1){grid-column:span 1;}}
 
@@ -258,9 +323,9 @@
     display:inline-flex;align-items:center;gap:10px;background:var(--paper);border:1px solid var(--cream-2);
     padding:14px 24px;border-radius:100px;box-shadow:0 6px 20px -10px rgba(43,33,26,.3);
   }
-  .g-badge .gnum{font-size:1.5rem;font-weight:700;color:var(--ink);font-family:'Fraunces',serif;}
-  .g-badge .stars-big{color:var(--gold);font-size:1.1rem;letter-spacing:2px;}
-  .g-badge .g-count{font-size:.85rem;color:var(--ink-soft);}
+  .g-badge .gnum{font-family:'IBM Plex Mono',monospace;font-size:1.5rem;font-weight:600;color:var(--ink);}
+  .g-badge .stars-big{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--gold-deep);font-size:1.1rem;letter-spacing:2px;}
+  .g-badge .g-count{font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:.85rem;color:var(--ink-soft);}
   .rating-summary a{font-size:.88rem;font-weight:600;color:var(--teal-dark);text-decoration:underline;}
   .testi-grid{display:grid;grid-template-columns:1fr;gap:20px;}
   @media(min-width:720px){.testi-grid{grid-template-columns:repeat(3,1fr);}}
@@ -268,7 +333,7 @@
     background:var(--paper);border:1px solid var(--cream-2);border-radius:var(--radius);
     padding:24px;box-shadow:0 6px 18px -12px rgba(43,33,26,.25);display:flex;flex-direction:column;gap:14px;
   }
-  .testi-card .stars{color:var(--gold);letter-spacing:2px;font-size:.95rem;}
+  .testi-card .stars{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--gold-deep);letter-spacing:2px;font-size:.95rem;}
   .testi-card p{margin:0;color:var(--ink);font-size:.94rem;flex:1;}
   .testi-card footer{font-size:.85rem;font-weight:600;color:var(--teal-dark);}
   .testi-card footer span{display:block;font-weight:400;color:var(--ink-soft);font-size:.78rem;}
@@ -297,7 +362,7 @@
   .footer-brand img{width:32px;height:32px;border-radius:50%;object-fit:cover;}
   .footer-brand span{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;color:#fff;}
   footer.site-footer p{color:#C9BFA8;font-size:.9rem;}
-  footer.site-footer h4{color:#fff;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;}
+  footer.site-footer h4{font-family:'IBM Plex Mono',monospace;font-weight:600;color:#fff;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;}
   footer.site-footer a{color:#EFE6D4;text-decoration:none;font-size:.94rem;display:block;margin-bottom:10px;}
   footer.site-footer a:hover{color:var(--gold-light);}
   .social-row{display:flex;gap:12px;margin-top:6px;}
@@ -340,11 +405,28 @@
       <img src="images/favicon.png" alt="Musti's Grill & Bistro logo" width="34" height="34">
       <span class="brand-text">Musti's Grill & Bistro<small>Horley, Surrey</small></span>
     </a>
+    <nav class="site-nav" aria-label="Section navigation">
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#hours">Hours &amp; Location</a>
+    </nav>
     <div class="header-cta">
-      <a class="btn header-call" href="tel:+447368964617">📞 Call Now</a>
-      <a class="btn btn-primary" href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">Order Delivery</a>
+      <a class="btn btn-primary" href="tel:+447368964617">📞 Call Now</a>
     </div>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open section menu">
+      <svg class="icon-burger" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Section navigation">
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#hours">Hours &amp; Location</a>
+  </nav>
 </header>
 
 <!-- ================= HERO ================= -->
@@ -357,7 +439,7 @@
     <p class="tagline">Family-run kebabs, wraps, burgers, breakfast and mezze — flame-grilled fresh, served with warmth. 5&#9733; Food Hygiene Rating.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="tel:+447368964617">📞 Call Now</a>
-      <a class="btn btn-outline" href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">Order Delivery</a>
+      <a class="btn btn-outline" href="#menu">View Menu</a>
     </div>
     <div class="hero-address">
       📍 19 High St, Horley, Surrey RH6 7BH ·
@@ -372,11 +454,14 @@
 <section id="about">
   <div class="container about-grid">
     <div class="about-photo">
-      <img src="images/shopfront-exterior.jpg" alt="Musti's Grill & Bistro shopfront on Horley High Street" loading="lazy">
+      <picture>
+        <source srcset="images/shopfront-exterior.webp" type="image/webp">
+        <img src="images/shopfront-exterior.jpg" alt="Musti's Grill & Bistro exterior on Horley High Street" width="1080" height="1351" loading="lazy">
+      </picture>
     </div>
     <div class="about-copy">
       <div class="eyebrow">
-        <svg class="tulip" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="tulip" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
         Our Story
       </div>
       <h2>From a Grill Van to Your High Street Table</h2>
@@ -384,11 +469,11 @@
       <p>Every plate is still cooked to order by our family, for yours. Pop in for a Turkish coffee, a full breakfast, or a mixed grill shared with friends — you're always welcome at our table.</p>
       <div class="badge-row">
         <div class="badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
           5★ Food Hygiene Rating
         </div>
         <div class="badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
           Family-Run Since Day One
         </div>
       </div>
@@ -403,11 +488,11 @@
   <div class="container">
     <div class="section-head">
       <div class="eyebrow" style="justify-content:center;">
-        <svg class="tulip" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="tulip" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
         On the Menu
       </div>
       <h2>Our Full Menu</h2>
-      <p>Everything we serve, straight from the grill to the table — or order the same menu for delivery via Just Eat.</p>
+      <p>Everything we serve, straight from the grill to the table. Call ahead for takeaway, or come find us on Horley High Street.</p>
     </div>
 
     <nav class="menu-nav" aria-label="Menu categories">
@@ -564,7 +649,7 @@
       <p>Our kitchen handles all 14 major allergens, including gluten, nuts, dairy, sesame and shellfish. If you have a food allergy or intolerance, please tell a member of staff before ordering — full allergen information for every dish is available on request, in person or by calling <a href="tel:+447368964617" style="color:var(--terracotta-dark);font-weight:600;">+44 7368 964617</a>.</p>
     </div>
 
-    <p class="menu-cta">Order this menu for delivery: <a href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">via Just Eat →</a></p>
+    <p class="menu-cta">For takeaway or questions, call us on <a href="tel:+447368964617">+44 7368 964617</a></p>
     <p class="menu-disclaimer">Prices correct as of 20 July 2026 — please confirm with staff for the latest menu.</p>
   </div>
 </section>
@@ -574,7 +659,7 @@
   <div class="container">
     <div class="section-head">
       <div class="eyebrow" style="justify-content:center;">
-        <svg class="tulip" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="tulip" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
         A Look Inside
       </div>
       <h2>From Our Grill to Your Plate</h2>
@@ -582,23 +667,38 @@
     </div>
     <div class="gallery-grid">
       <div class="arch-frame">
-        <div class="img-wrap"><img src="images/shopfront-exterior.jpg" alt="Musti's Grill & Bistro shopfront and outdoor seating" loading="lazy"></div>
+        <div class="img-wrap"><picture>
+          <source srcset="images/shopfront-exterior.webp" type="image/webp">
+          <img src="images/shopfront-exterior.jpg" alt="Musti's Grill & Bistro exterior and outdoor seating on Horley High Street" width="1080" height="1351" loading="lazy">
+        </picture></div>
         <span>Our Bistro</span>
       </div>
       <div class="arch-frame">
-        <div class="img-wrap"><img src="images/mixed-grill-platter.jpg" alt="Mixed grill platter with falafel, salad and rice" loading="lazy"></div>
+        <div class="img-wrap"><picture>
+          <source srcset="images/mixed-grill-platter.webp" type="image/webp">
+          <img src="images/mixed-grill-platter.jpg" alt="Mixed grill platter with falafel, grilled vegetables, rice and salad at Musti's Grill & Bistro" width="810" height="1013" loading="lazy">
+        </picture></div>
         <span>Mixed Grill</span>
       </div>
       <div class="arch-frame">
-        <div class="img-wrap"><img src="images/lamb-chops.jpg" alt="Flame-grilled lamb chops" loading="lazy"></div>
+        <div class="img-wrap"><picture>
+          <source srcset="images/lamb-chops.webp" type="image/webp">
+          <img src="images/lamb-chops.jpg" alt="Mixed grill platter with lamb chops, chicken and kofta at Musti's Grill & Bistro" width="934" height="1168" loading="lazy">
+        </picture></div>
         <span>Lamb Chops</span>
       </div>
       <div class="arch-frame">
-        <div class="img-wrap"><img src="images/beef-burger-chips.jpg" alt="Beef burger with chips" loading="lazy"></div>
+        <div class="img-wrap"><picture>
+          <source srcset="images/beef-burger-chips.webp" type="image/webp">
+          <img src="images/beef-burger-chips.jpg" alt="Flame-grilled beef burger with seasoned chips at Musti's Grill & Bistro" width="1080" height="704" loading="lazy">
+        </picture></div>
         <span>Burgers</span>
       </div>
       <div class="arch-frame">
-        <div class="img-wrap"><img src="images/cover-fries-chicken.jpg" alt="Kebab platter with chips and tzatziki" loading="lazy"></div>
+        <div class="img-wrap"><picture>
+          <source srcset="images/cover-fries-chicken.webp" type="image/webp">
+          <img src="images/cover-fries-chicken.jpg" alt="Chicken şiş kebab platter with chips and tzatziki at Musti's Grill & Bistro" width="960" height="808" loading="lazy">
+        </picture></div>
         <span>Kebab Platter</span>
       </div>
     </div>
@@ -654,11 +754,11 @@
 </section>
 
 <!-- ================= HOURS & LOCATION ================= -->
-<section id="visit">
+<section id="hours">
   <div class="container hl-grid">
     <div>
       <div class="eyebrow">
-        <svg class="tulip" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="tulip" aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-3 2-4.5 5-4.5 8 0 3 2 4.5 4.5 4.5S16.5 14 16.5 11c0-3-1.5-6-4.5-8z" fill="#C1502E"/><path d="M12 15.5V21" stroke="#0E5E63" stroke-width="1.6" stroke-linecap="round"/></svg>
         Visit Us
       </div>
       <h2>Hours &amp; Location</h2>
@@ -678,7 +778,6 @@
         </table>
         <div class="contact-row">
           <a class="btn btn-teal" href="tel:+447368964617">📞 +44 7368 964617</a>
-          <a class="btn" style="background:var(--paper);border:2px solid var(--cream-2);color:var(--ink);" href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">Order Delivery</a>
         </div>
       </div>
     </div>
@@ -698,8 +797,8 @@
       </div>
       <p>Authentic Turkish kebabs, wraps, burgers &amp; breakfast — family-run on Horley High Street since we swapped our grill van for four walls.</p>
       <div class="social-row">
-        <a href="https://www.facebook.com/mustis.grill/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.5-3H13.5V8.25c0-.87.24-1.46 1.5-1.46H16.5V4.14C16.03 4.08 14.98 4 13.9 4 11.2 4 9.5 5.6 9.5 8.4v2.1H7V13.5h2.5V21h4z"/></svg></a>
-        <a href="https://www.instagram.com/mustis.grill/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        <a href="https://www.facebook.com/mustis.grill/" target="_blank" rel="noopener" aria-label="Musti's Grill & Bistro on Facebook"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.5-3H13.5V8.25c0-.87.24-1.46 1.5-1.46H16.5V4.14C16.03 4.08 14.98 4 13.9 4 11.2 4 9.5 5.6 9.5 8.4v2.1H7V13.5h2.5V21h4z"/></svg></a>
+        <a href="https://www.instagram.com/mustis.grill/" target="_blank" rel="noopener" aria-label="Musti's Grill & Bistro on Instagram"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
       </div>
     </div>
     <div>
@@ -708,21 +807,21 @@
       <a href="tel:+447368964617">+44 7368 964617</a>
     </div>
     <div>
-      <h4>Order &amp; Reviews</h4>
-      <a href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">Order on Just Eat</a>
+      <h4>Contact</h4>
+      <a href="tel:+447368964617">📞 Call for takeaway &amp; questions</a>
       <a href="https://www.google.com/maps/search/?api=1&query=Musti%27s+Grill+%26+Bistro%2C+19+High+St%2C+Horley+RH6+7BH" target="_blank" rel="noopener">4.9★ · 132 Google reviews</a>
     </div>
   </div>
   <div class="container footer-note">
     <span>© <span id="year"></span> Musti's Grill & Bistro. All rights reserved.</span>
-    <span class="coffee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h13a2 2 0 010 4h-1M4 8v7a3 3 0 003 3h6a3 3 0 003-3v-2M8 3c0 1-1 1-1 2s1 1 1 2M12 3c0 1-1 1-1 2s1 1 1 2"/></svg> Şerefe — good coffee, good company.</span>
+    <span class="coffee"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h13a2 2 0 010 4h-1M4 8v7a3 3 0 003 3h6a3 3 0 003-3v-2M8 3c0 1-1 1-1 2s1 1 1 2M12 3c0 1-1 1-1 2s1 1 1 2"/></svg> Şerefe — good coffee, good company.</span>
   </div>
 </footer>
 
 <!-- ================= STICKY MOBILE CTA ================= -->
 <div class="mobile-cta">
   <a class="btn btn-primary" href="tel:+447368964617">📞 Call Now</a>
-  <a class="btn btn-teal" href="https://www.just-eat.co.uk/restaurants-mustis-grill-surrey/menu" target="_blank" rel="noopener">Order Delivery</a>
+  <a class="btn btn-teal" href="#menu">View Menu</a>
 </div>
 
 <script>
@@ -772,6 +871,65 @@
         var isMatch = a.getAttribute('href') === '#' + id;
         a.classList.toggle('active', isMatch);
         if(isMatch) a.scrollIntoView({inline:'center', block:'nearest', behavior:'smooth'});
+      });
+    }
+
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting) setActive(entry.target.id);
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach(function(s){ observer.observe(s); });
+  })();
+
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var mobileNav = document.getElementById('mobileNav');
+    if(!toggle || !mobileNav) return;
+
+    function closeMenu(){
+      toggle.classList.remove('open');
+      mobileNav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open section menu');
+    }
+    function openMenu(){
+      toggle.classList.add('open');
+      mobileNav.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Close section menu');
+    }
+
+    toggle.addEventListener('click', function(){
+      if(mobileNav.classList.contains('open')) closeMenu(); else openMenu();
+    });
+    mobileNav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && mobileNav.classList.contains('open')){
+        closeMenu();
+        toggle.focus();
+      }
+    });
+    document.addEventListener('click', function(e){
+      if(mobileNav.classList.contains('open') && !mobileNav.contains(e.target) && !toggle.contains(e.target)){
+        closeMenu();
+      }
+    });
+  })();
+
+  (function(){
+    var siteLinks = Array.from(document.querySelectorAll('.site-nav a, .mobile-nav a'));
+    if(!siteLinks.length || !('IntersectionObserver' in window)) return;
+    var sections = siteLinks
+      .map(function(a){ return document.querySelector(a.getAttribute('href')); })
+      .filter(Boolean);
+
+    function setActive(id){
+      siteLinks.forEach(function(a){
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
       });
     }
 
