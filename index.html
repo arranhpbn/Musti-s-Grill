@@ -256,9 +256,26 @@
   }
 
   /* ---------- Full Menu ---------- */
+  .menu-tabs{
+    display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;
+  }
+  .menu-tab{
+    font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;
+    padding:13px 28px;border-radius:100px;border:2px solid var(--terracotta);
+    background:var(--paper);color:var(--terracotta-dark);cursor:pointer;
+    transition:background .15s ease, color .15s ease, box-shadow .15s ease;
+  }
+  .menu-tab:hover{background:rgba(193,80,46,.08);}
+  .menu-tab.active{background:var(--terracotta);color:#fff;box-shadow:0 10px 24px -10px rgba(193,80,46,.55);}
+  @media(max-width:600px){
+    .menu-tabs{flex-direction:column;align-items:stretch;}
+    .menu-tab{text-align:center;}
+  }
+  .menu-panel{display:none;}
+  .menu-panel.active{display:block;}
   .menu-nav{
     display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;margin-bottom:8px;
-    scrollbar-width:none;position:sticky;top:82px;background:var(--cream-2);z-index:5;
+    scrollbar-width:none;position:sticky;top:70px;background:var(--cream-2);z-index:5;
   }
   .menu-nav::-webkit-scrollbar{display:none;}
   .menu-nav a{
@@ -300,7 +317,7 @@
   .menu-disclaimer{text-align:center;margin-top:24px;color:var(--ink-soft);font-size:.82rem;}
   .menu-cta{text-align:center;margin-top:18px;font-size:.95rem;color:var(--ink-soft);}
   .menu-cta a{color:var(--terracotta-dark);font-weight:600;}
-  @media(max-width:859px){.menu-nav{top:0;}}
+  @media(max-width:859px){.menu-nav{top:65px;}}
 
   /* ---------- Gallery ---------- */
   .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
@@ -492,165 +509,473 @@
         On the Menu
       </div>
       <h2>Our Full Menu</h2>
-      <p>Everything we serve, straight from the grill to the table. Call ahead for takeaway, or come find us on Horley High Street.</p>
+      <p>Everything we serve, straight from the grill to the table — all our meat is Halal. Call ahead for takeaway, or come find us on Horley High Street.</p>
     </div>
 
-    <nav class="menu-nav" aria-label="Menu categories">
-      <a href="#menu-kebabs">Kebabs</a>
-      <a href="#menu-burgers">Burgers</a>
-      <a href="#menu-wraps">Wraps</a>
-      <a href="#menu-sides">Sides</a>
-      <a href="#menu-kids">Kids Meals</a>
-      <a href="#menu-drinks">Drinks</a>
-      <a href="#menu-sweet">Sweet Treat</a>
-      <a href="#menu-sauces">Sauces</a>
-    </nav>
-
-    <!-- Kebabs -->
-    <div class="menu-category" id="menu-kebabs">
-      <div class="menu-cat-head">
-        <h3>Kebabs</h3><span class="tr">Izgara</span>
-        <p class="menu-cat-note">Served with mixed salad and Turkish bread. GF pita available for extra cost.</p>
-      </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Sis</span><span class="menu-item-desc">Tender cubed lamb, skewered then grilled on the flame</span></div><span class="menu-item-price">from £13.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Sis</span><span class="menu-item-desc">Mouth-watering chicken, skewered, then grilled on the flame</span></div><span class="menu-item-price">from £12.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (8 Pieces)</span><span class="menu-item-desc">Tender, flame-grilled chicken wings packed with flavour</span></div><span class="menu-item-price">£11.50</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (15 Pieces)</span><span class="menu-item-desc">Tender, flame-grilled chicken wings packed with flavour</span></div><span class="menu-item-price">£18.50</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb and Chicken Sis</span><span class="menu-item-desc">Skewers of marinated lamb and chicken, grilled to perfection</span></div><span class="menu-item-price">£20.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Shish and Kofte Shish</span></div><span class="menu-item-price">£19.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mega Mix</span><span class="menu-item-desc">Lamb and chicken sis (6 pieces each), lamb kofte (3 pieces)</span></div><span class="menu-item-price">£28.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Kofte Shish</span><span class="menu-item-desc">Fresh minced lamb, seasoned well with a mixture of herbs and sweet red pepper.</span></div><span class="menu-item-price">from £11.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Veg with Halloumi or Falafel<span class="tag veg">V</span></span><span class="menu-item-desc">Grilled mixed vegetables served with halloumi or falafel — a hearty vegetarian option</span></div><span class="menu-item-price">£11.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Chops (4 Pieces)</span><span class="menu-item-desc">Grilled to perfection with Musti's special seasoning</span></div><span class="menu-item-price">£29.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Family Special (for 4)</span><span class="menu-item-desc">Chicken shish, lamb shish, kofta shish, wings, lamb chops, rice, salad, Turkish bread, chilli and garlic sauce</span></div><span class="menu-item-price">£70.00</span></div>
-      </div>
+    <div class="menu-tabs" role="tablist" aria-label="Menu type">
+      <button class="menu-tab active" type="button" data-tab="takeaway" role="tab" aria-selected="true">Takeaway</button>
+      <button class="menu-tab" type="button" data-tab="bistro" role="tab" aria-selected="false">Bistro (Day)</button>
+      <button class="menu-tab" type="button" data-tab="restaurant" role="tab" aria-selected="false">Restaurant (Evening)</button>
     </div>
 
-    <!-- Burgers -->
-    <div class="menu-category" id="menu-burgers">
-      <div class="menu-cat-head">
-        <h3>Burgers</h3><span class="tr">Hamburger</span>
-        <p class="menu-cat-note">Served with seasoned chips.</p>
+    <!-- ============ TAKEAWAY ============ -->
+    <div class="menu-panel active" data-panel="takeaway">
+      <nav class="menu-nav" aria-label="Takeaway categories">
+        <a href="#tk-kebabs">Kebabs</a>
+        <a href="#tk-burgers">Burgers</a>
+        <a href="#tk-wraps">Wraps</a>
+        <a href="#tk-sides">Sides</a>
+        <a href="#tk-kids">Kids Meals</a>
+        <a href="#tk-drinks">Drinks</a>
+        <a href="#tk-sweet">Sweet Treat</a>
+        <a href="#tk-sauces">Sauces</a>
+      </nav>
+
+      <div class="menu-category" id="tk-kebabs">
+        <div class="menu-cat-head">
+          <h3>Kebabs</h3><span class="tr">İzgara</span>
+          <p class="menu-cat-note">Served with mixed salad &amp; Turkish bread (GF pita available +£1.75).</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Şiş</span><span class="menu-item-desc">Tender cubed lamb, skewered then grilled on the flame. Large available for £18.00.</span></div><span class="menu-item-price">from £11.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş</span><span class="menu-item-desc">Mouth-watering chicken, skewered then grilled on the flame. Large available for £15.50.</span></div><span class="menu-item-price">from £9.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (8 Pieces)</span></div><span class="menu-item-price">£9.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (15 Pieces)</span></div><span class="menu-item-price">£16.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Şiş (Lamb &amp; Chicken)</span></div><span class="menu-item-price">£16.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Şiş (Lamb &amp; Köfte)</span></div><span class="menu-item-price">£18.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mega Mix</span><span class="menu-item-desc">Lamb &amp; chicken şiş (6 pieces each), lamb köfte (3 pieces)</span></div><span class="menu-item-price">£23.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Köfte</span><span class="menu-item-desc">Fresh minced lamb, seasoned with herbs &amp; sweet red pepper, grilled on the flame. Large available for £18.00.</span></div><span class="menu-item-price">from £9.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Veg with Halloumi or Falafel<span class="tag veg">V</span></span></div><span class="menu-item-price">£9.50</span></div>
+        </div>
       </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Chicken Burger</span><span class="menu-item-desc">Marinated overnight to achieve the best possible flavour</span></div><span class="menu-item-price">£12.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger</span><span class="menu-item-desc">8oz of pure beef, flame-grilled, served on a seeded bun</span></div><span class="menu-item-price">£12.50</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi Burger<span class="tag veg">V</span></span><span class="menu-item-desc">Thick slices of grilled halloumi.</span></div><span class="menu-item-price">£11.50</span></div>
+
+      <div class="menu-category" id="tk-burgers">
+        <div class="menu-cat-head">
+          <h3>Burgers</h3><span class="tr">Hamburger</span>
+          <p class="menu-cat-note">Served with seasoned chips.</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Chicken Burger</span><span class="menu-item-desc">Marinated overnight for unbeatable flavour. Add cheese £1 / halloumi £2.</span></div><span class="menu-item-price">£9.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger</span><span class="menu-item-desc">8oz of pure beef, flame-grilled, seeded bun. Add cheese £1.</span></div><span class="menu-item-price">£10.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi Burger<span class="tag veg">V</span></span></div><span class="menu-item-price">£9.00</span></div>
+        </div>
       </div>
+
+      <div class="menu-category" id="tk-wraps">
+        <div class="menu-cat-head">
+          <h3>Wraps</h3><span class="tr">Dürüm</span>
+          <p class="menu-cat-note">Served with choice of salad and sauce (upgrade to Turkish bread +£1.50).</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wrap</span><span class="menu-item-desc">Mouth-watering chicken, skewered then grilled on the flame. Large available for £14.00.</span></div><span class="menu-item-price">from £8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kofte Wrap</span><span class="menu-item-desc">Fresh minced lamb, seasoned with herbs</span></div><span class="menu-item-price">£9.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Wrap</span><span class="menu-item-desc">Juicy grilled lamb with fresh salad</span></div><span class="menu-item-price">£10.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken &amp; Halloumi Wrap</span><span class="menu-item-desc">Delicious combination, served fresh off the grill</span></div><span class="menu-item-price">£10.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Halloumi Wrap<span class="tag veg">V</span></span><span class="menu-item-desc">Flame-grilled squeaky cheesy goodness</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel Wrap<span class="tag vegan">VE</span></span><span class="menu-item-desc">Served with hummus and choice of salad</span></div><span class="menu-item-price">£9.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş Salad Box</span></div><span class="menu-item-price">£9.00</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="tk-sides">
+        <div class="menu-cat-head">
+          <h3>Sides</h3><span class="tr">Mezeler</span>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Borek (4 Pieces)<span class="tag veg">V</span></span><span class="menu-item-desc">Filo pastry filled with feta cheese and herbs</span></div><span class="menu-item-price">£5.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (6 Pieces)</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seasoned Chips</span><span class="menu-item-desc">Large available for £5.00.</span></div><span class="menu-item-price">from £3.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cheesy Chips</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Salad</span></div><span class="menu-item-price">£3.25</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel (4 Pieces)<span class="tag vegan">VE</span></span><span class="menu-item-desc">With hummus</span></div><span class="menu-item-price">£5.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tzatziki / Cacık</span><span class="menu-item-desc">Natural yoghurt mixed with cucumber, garlic &amp; dry mint</span></div><span class="menu-item-price">£3.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hummus</span></div><span class="menu-item-price">£3.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Marinated Pitted Green Olives</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Extra Portion of Bread</span><span class="menu-item-desc">GF available +£3.00.</span></div><span class="menu-item-price">£2.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="tk-kids">
+        <div class="menu-cat-head">
+          <h3>Kids Meals</h3><span class="tr">Çocuk Menüsü</span>
+          <p class="menu-cat-note">Kids meals come with an apple and blackcurrant fruit shoot.</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Nuggets x5 With Chips</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş x5 With Chips</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Şiş x5 With Chips</span></div><span class="menu-item-price">£7.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger With Chips</span></div><span class="menu-item-price">£6.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="tk-drinks">
+        <div class="menu-cat-head">
+          <h3>Drinks</h3><span class="tr">İçecekler</span>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cans</span></div><span class="menu-item-price">£1.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Water</span></div><span class="menu-item-price">£1.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Ayran</span><span class="menu-item-desc">Traditional yoghurt-based drink</span></div><span class="menu-item-price">£2.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Salgam</span><span class="menu-item-desc">Traditional vegetable-based drink</span></div><span class="menu-item-price">£2.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fruit Shoot</span></div><span class="menu-item-price">£1.25</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Red Bull</span></div><span class="menu-item-price">£2.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (33cl)<span class="tag age">18+</span></span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (50cl)<span class="tag age">18+</span></span></div><span class="menu-item-price">£3.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="tk-sweet">
+        <div class="menu-cat-head">
+          <h3>Sweet Treat</h3><span class="tr">Tatlı</span>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Baklava (4 Pieces)</span></div><span class="menu-item-price">£5.00</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="tk-sauces">
+        <div class="menu-cat-head">
+          <h3>Sauces</h3><span class="tr">Soslar</span>
+          <p class="menu-cat-note">£1.00 each.</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Homemade Garlic Mayo</span></div><span class="menu-item-price">£1.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Homemade Chilli Sauce (Medium)</span></div><span class="menu-item-price">£1.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sweet Chilli</span></div><span class="menu-item-price">£1.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Burger Sauce</span></div><span class="menu-item-price">£1.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">BBQ</span></div><span class="menu-item-price">£1.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Ketchup</span></div><span class="menu-item-price">£1.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mayo</span></div><span class="menu-item-price">£1.00</span></div>
+        </div>
+      </div>
+
+      <div class="allergen-notice">
+        <p>All our meat is Halal. We take cash or card payments, on collection of your order. We are available for private hire — please get in contact for more info.</p>
+      </div>
+      <p class="menu-disclaimer">Prices correct as of 23 July 2026 — please confirm with staff for the latest menu.</p>
     </div>
 
-    <!-- Wraps -->
-    <div class="menu-category" id="menu-wraps">
-      <div class="menu-cat-head">
-        <h3>Wraps</h3><span class="tr">Dürüm</span>
-        <p class="menu-cat-note">Served with your choice of salad and sauce (upgrade to Turkish bread for extra cost).</p>
+    <!-- ============ BISTRO (DAY) ============ -->
+    <div class="menu-panel" data-panel="bistro">
+      <nav class="menu-nav" aria-label="Bistro categories">
+        <a href="#bs-breakfast">Breakfast</a>
+        <a href="#bs-toasted">Toasted Sandwiches</a>
+        <a href="#bs-sandwiches">Sandwiches</a>
+        <a href="#bs-jacket">Jacket Potatoes</a>
+        <a href="#bs-salads">Salads</a>
+        <a href="#bs-burgers">Burgers</a>
+        <a href="#bs-wraps">Wraps</a>
+        <a href="#bs-kids">Kids Meals</a>
+        <a href="#bs-sides">Sides</a>
+        <a href="#bs-smoothies">Smoothies</a>
+        <a href="#bs-coffee">Coffee</a>
+        <a href="#bs-tea">Tea</a>
+        <a href="#bs-softdrinks">Soft Drinks</a>
+      </nav>
+
+      <div class="menu-category" id="bs-breakfast">
+        <div class="menu-cat-head">
+          <h3>Breakfast</h3>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Turkish Breakfast</span><span class="menu-item-desc">Fried eggs, spicy beef sucuk, grilled halloumi, hummus, feta cheese, olives, tomato &amp; cucumber, served with warm Turkish bread</span></div><span class="menu-item-price">£12.90</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Turkish Menemen</span><span class="menu-item-desc">Fluffy scrambled eggs with tomatoes, green peppers, onions and a hint of spices, served with warm Turkish bread</span></div><span class="menu-item-price">£9.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Full Breakfast</span><span class="menu-item-desc">Smoked turkey rashers, chicken sausages, eggs of choice, hash browns, grilled tomato, baked beans, mushrooms, crispy toast</span></div><span class="menu-item-price">£12.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Eggs Royal</span><span class="menu-item-desc">Two poached eggs on toasted sourdough, smoked salmon, hollandaise sauce, rocket, chives</span></div><span class="menu-item-price">£12.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Poached Eggs on Sourdough</span><span class="menu-item-desc">Add smashed avocado +£1.50 / wilted spinach &amp; grilled tomatoes +£2.00.</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Omelettes</span><span class="menu-item-desc">Made to order, served with side salad. Create your own: cheese £1, halloumi £2, mushrooms £1, onion £1, tomato £1, spinach £1.50, sucuk £2.50, Turkish peppers £1.</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pancakes</span><span class="menu-item-desc">Fresh seasonal fruit &amp; maple syrup</span></div><span class="menu-item-price">£9.50</span></div>
+        </div>
       </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wrap</span><span class="menu-item-desc">Mouth-watering chicken, skewered, then grilled on the flame</span></div><span class="menu-item-price">from £11.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Kofte Wrap</span><span class="menu-item-desc">Fresh minced lamb, seasoned well with a mixture of herbs</span></div><span class="menu-item-price">£11.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Shish Wrap</span></div><span class="menu-item-price">£12.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken and Halloumi Wrap</span><span class="menu-item-desc">Delicious combination of flavours served fresh off the grill</span></div><span class="menu-item-price">£12.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Halloumi Wrap<span class="tag veg">V</span></span><span class="menu-item-desc">Flame-grilled squeaky cheesy greatness</span></div><span class="menu-item-price">£10.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel Wrap<span class="tag vegan">VE</span></span><span class="menu-item-desc">Served with hummus and your choice of salad</span></div><span class="menu-item-price">£12.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Sis Salad Box</span></div><span class="menu-item-price">£12.50</span></div>
+
+      <div class="menu-category" id="bs-toasted">
+        <div class="menu-cat-head">
+          <h3>Toasted Sandwiches</h3>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Mozzarella &amp; Pesto</span><span class="menu-item-desc">Grilled chicken, mozzarella, sun-dried tomatoes, red onion &amp; rocket</span></div><span class="menu-item-price">£9.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tuna Melt</span><span class="menu-item-desc">Tuna mayo, red onions &amp; melted mozzarella</span></div><span class="menu-item-price">£8.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Caprice Melt<span class="tag veg">V</span></span><span class="menu-item-desc">Mozzarella, sun-dried tomatoes &amp; fresh basil</span></div><span class="menu-item-price">£8.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pastrami Special</span><span class="menu-item-desc">Pastrami, Monterey Jack cheese, dill pickle, dijonnaise &amp; rocket</span></div><span class="menu-item-price">£10.00</span></div>
+        </div>
       </div>
+
+      <div class="menu-category" id="bs-sandwiches">
+        <div class="menu-cat-head">
+          <h3>Freshly Made Sandwiches</h3>
+          <p class="menu-cat-note">£6.50 each.</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Coronation Chicken</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Salad</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tuna Mayo</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cheese and Onion</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pastrami</span></div><span class="menu-item-price">£6.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-jacket">
+        <div class="menu-cat-head">
+          <h3>Jacket Potatoes</h3>
+          <p class="menu-cat-note">Freshly baked, served with crisp side salad.</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Jacket Potato</span><span class="menu-item-desc">Fillings: coronation chicken +£3, chicken Caesar salad +£3, baked beans +£2, beans &amp; cheese +£3, tuna mayo +£2.</span></div><span class="menu-item-price">£6.00</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-salads">
+        <div class="menu-cat-head">
+          <h3>Salads</h3><span class="tr">Salata</span>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Chicken Caesar</span><span class="menu-item-desc">Romaine lettuce, croutons, shaved parmesan &amp; creamy Caesar dressing</span></div><span class="menu-item-price">£10.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken &amp; Halloumi Salad</span><span class="menu-item-desc">Grilled chicken, halloumi &amp; mixed salad</span></div><span class="menu-item-price">£11.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Turkish Salad</span><span class="menu-item-desc">Feta cheese, olives, mixed leaf salad with sumac and olive oil</span></div><span class="menu-item-price">£9.00</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-burgers">
+        <div class="menu-cat-head">
+          <h3>Burgers</h3><span class="tr">Hamburger</span>
+          <p class="menu-cat-note">Served with seasoned chips, salad &amp; choice of sauce (add cheese £1 / grilled halloumi £2.50).</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Chicken Burger</span><span class="menu-item-desc">Marinated overnight for unbeatable flavour</span></div><span class="menu-item-price">£10.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger</span><span class="menu-item-desc">8oz of flame-grilled pure beef on a seeded bun</span></div><span class="menu-item-price">£11.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi Burger<span class="tag veg">V</span></span><span class="menu-item-desc">Chargrilled halloumi stacked with fresh salad</span></div><span class="menu-item-price">£9.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-wraps">
+        <div class="menu-cat-head">
+          <h3>Wraps</h3><span class="tr">Dürüm</span>
+          <p class="menu-cat-note">All wraps served with salad &amp; choice of sauce (upgrade to Turkish bread +£1.50).</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wrap</span><span class="menu-item-desc">Large available for £14.00.</span></div><span class="menu-item-price">from £9.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kofte Wrap</span></div><span class="menu-item-price">£9.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Wrap</span></div><span class="menu-item-price">£10.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken &amp; Halloumi Wrap</span></div><span class="menu-item-price">£10.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Halloumi Wrap<span class="tag veg">V</span></span></div><span class="menu-item-price">£9.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel Wrap<span class="tag vegan">VE</span></span></div><span class="menu-item-price">£8.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-kids">
+        <div class="menu-cat-head">
+          <h3>Kids Meals</h3><span class="tr">Çocuk Menüsü</span>
+          <p class="menu-cat-note">All served with chips.</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Real Chicken Nuggets</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger</span></div><span class="menu-item-price">£6.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-sides">
+        <div class="menu-cat-head">
+          <h3>Sides</h3><span class="tr">Mezeler</span>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Borek (4 Pieces)<span class="tag veg">V</span></span><span class="menu-item-desc">Filo pastry filled with feta cheese and herbs</span></div><span class="menu-item-price">£5.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seasoned Chips</span></div><span class="menu-item-price">£3.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cheesy Chips</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hummus &amp; Turkish Bread</span></div><span class="menu-item-price">£5.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Green Olives</span></div><span class="menu-item-price">£4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sucuk</span></div><span class="menu-item-price">£4.00</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-smoothies">
+        <div class="menu-cat-head">
+          <h3>Smoothies</h3>
+          <p class="menu-cat-note">£4.50 each.</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Green River</span><span class="menu-item-desc">Banana, kale, mango and lemongrass</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pineapple Sunset</span><span class="menu-item-desc">Pineapple, papaya and mango</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Raspberry Heaven</span><span class="menu-item-desc">Apple, raspberry, mango and blueberry</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Passion Storm</span><span class="menu-item-desc">Pineapple, papaya, passion fruit, guava purée, aloe vera juice</span></div><span class="menu-item-price">£4.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-coffee">
+        <div class="menu-cat-head">
+          <h3>Coffee</h3>
+          <p class="menu-cat-note">Alternative milks &amp; syrups available, +£0.60.</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Espresso</span><span class="menu-item-desc">Double available for £3.20.</span></div><span class="menu-item-price">from £2.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cortado</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Americano</span><span class="menu-item-desc">Regular available for £3.40.</span></div><span class="menu-item-price">from £3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Flat White</span></div><span class="menu-item-price">£3.60</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Latte</span><span class="menu-item-desc">Regular available for £4.00.</span></div><span class="menu-item-price">from £3.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cappuccino</span><span class="menu-item-desc">Regular available for £4.00.</span></div><span class="menu-item-price">from £3.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mocha</span><span class="menu-item-desc">Regular available for £4.40.</span></div><span class="menu-item-price">from £4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hot Chocolate</span><span class="menu-item-desc">Regular available for £4.00.</span></div><span class="menu-item-price">from £3.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chai Latte</span><span class="menu-item-desc">Regular available for £4.20.</span></div><span class="menu-item-price">from £3.80</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-tea">
+        <div class="menu-cat-head">
+          <h3>Tea</h3>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">English Breakfast</span></div><span class="menu-item-price">£2.40</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Earl Grey</span></div><span class="menu-item-price">£2.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Selection of Herbal Teas</span></div><span class="menu-item-price">£2.40</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pot of Turkish Tea</span></div><span class="menu-item-price">£4.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-softdrinks">
+        <div class="menu-cat-head">
+          <h3>Soft Drinks</h3>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Selection of Bottled Soft Drinks</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fresh Orange Juice</span></div><span class="menu-item-price">£4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Apple Juice</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cranberry Juice</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Still Water</span></div><span class="menu-item-price">£2.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sparkling Water</span></div><span class="menu-item-price">£2.80</span></div>
+        </div>
+      </div>
+
+      <div class="allergen-notice">
+        <p>All our meat is Halal. We take cash or card, and pre-orders are available. We are available for private hires and functions — please ask a member of staff. We also supply BBQ boxes — please ask for information.</p>
+      </div>
+      <p class="menu-disclaimer">Prices correct as of 23 July 2026 — please confirm with staff for the latest menu.</p>
     </div>
 
-    <!-- Sides -->
-    <div class="menu-category" id="menu-sides">
-      <div class="menu-cat-head">
-        <h3>Sides</h3><span class="tr">Mezeler</span>
-      </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Borek<span class="tag veg">V</span></span><span class="menu-item-desc">Filo pastry filled with feta cheese and herbs</span></div><span class="menu-item-price">£6.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (6 Pieces)</span><span class="menu-item-desc">Tender, flame-grilled chicken wings packed with flavour</span></div><span class="menu-item-price">£8.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seasoned Chips</span><span class="menu-item-desc">Portion of seasoned chips</span></div><span class="menu-item-price">from £4.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cheesy Chips</span><span class="menu-item-desc">Portion of chips with melted cheese</span></div><span class="menu-item-price">£5.50</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi</span><span class="menu-item-desc">Portion of grilled halloumi</span></div><span class="menu-item-price">£6.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Salad</span></div><span class="menu-item-price">£3.50</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel (4 Pieces)<span class="tag vegan">VE</span></span><span class="menu-item-desc">With hummus</span></div><span class="menu-item-price">£6.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tzatziki (Cacık)</span><span class="menu-item-desc">Natural yoghurt mixed with cucumber, garlic and dry mint</span></div><span class="menu-item-price">£4.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hummus</span><span class="menu-item-desc">Creamy chickpea dip</span></div><span class="menu-item-price">£4.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Marinated Pitted Green Olives</span><span class="menu-item-desc">Green olives marinated in herbs and olive oil</span></div><span class="menu-item-price">£5.50</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Extra Portion of Bread (GF Available)</span><span class="menu-item-desc">Freshly prepared</span></div><span class="menu-item-price">£3.50</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Turkish Sausage (Sucuk)</span><span class="menu-item-desc">Spicy grilled beef sausage</span></div><span class="menu-item-price">£5.50</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Rice<span class="tag veg">V</span></span><span class="menu-item-desc">Traditional Turkish bulgur rice cooked in tomato sauce with onions and seasonings</span></div><span class="menu-item-price">£4.50</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Feta Cheese</span><span class="menu-item-desc">Traditional Turkish white soft cheese</span></div><span class="menu-item-price">£4.50</span></div>
-      </div>
-    </div>
+    <!-- ============ RESTAURANT (EVENING) ============ -->
+    <div class="menu-panel" data-panel="restaurant">
+      <nav class="menu-nav" aria-label="Restaurant categories">
+        <a href="#rs-starters">Starters</a>
+        <a href="#rs-specials">Daily Specials</a>
+        <a href="#rs-mains">Mains</a>
+        <a href="#rs-burgers">Burgers</a>
+        <a href="#rs-wraps">Wraps</a>
+        <a href="#rs-salads">Salads</a>
+        <a href="#rs-kids">Kids Meals</a>
+        <a href="#rs-sides">Sides</a>
+      </nav>
 
-    <!-- Kids Meals -->
-    <div class="menu-category" id="menu-kids">
-      <div class="menu-cat-head">
-        <h3>Kids Meals</h3><span class="tr">Çocuk Menüsü</span>
-        <p class="menu-cat-note">Kids meals come with an apple and blackcurrant fruit shoot (200ml).</p>
+      <div class="menu-category" id="rs-starters">
+        <div class="menu-cat-head">
+          <h3>Starters</h3><span class="tr">Başlangıçlar</span>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hummus<span class="tag vegan">VE</span></span><span class="menu-item-desc">Creamy blended chickpeas with tahini, garlic &amp; lemon, drizzled with olive oil, served with warm Turkish bread</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cacık<span class="tag veg">V</span></span><span class="menu-item-desc">Yoghurt, cucumber, garlic &amp; mint, served with warm bread</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Ezme<span class="tag vegan">VE</span></span><span class="menu-item-desc">Finely chopped tomatoes, onions, parsley &amp; peppers with a spicy kick — a classic Anatolian salsa</span></div><span class="menu-item-price">£4.75</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi<span class="tag veg">V</span></span></div><span class="menu-item-price">£5.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Sucuk (4 Pieces)</span><span class="menu-item-desc">Traditional Turkish beef sausage</span></div><span class="menu-item-price">£5.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel (4 Pieces)<span class="tag vegan">VE</span></span><span class="menu-item-desc">Served on a bed of hummus</span></div><span class="menu-item-price">£5.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sigara Börek / Cheese Rolls<span class="tag veg">V</span></span><span class="menu-item-desc">Crispy filo pastry filled with feta and parsley</span></div><span class="menu-item-price">£5.25</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Meze Plate (for 2)</span><span class="menu-item-desc">Hummus, cacık, ezme, grilled halloumi, grilled sucuk, olives and sigara börek, served with warm bread</span></div><span class="menu-item-price">£15.50</span></div>
+        </div>
       </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Nuggets x5 With Chips</span></div><span class="menu-item-price">£8.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Sis x5 With Chips</span></div><span class="menu-item-price">£8.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Sis x5 With Chips</span></div><span class="menu-item-price">£9.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger With Chips</span></div><span class="menu-item-price">£8.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kids Chicken Shish Wrap With Chips</span></div><span class="menu-item-price">£8.00</span></div>
-      </div>
-    </div>
 
-    <!-- Drinks -->
-    <div class="menu-category" id="menu-drinks">
-      <div class="menu-cat-head">
-        <h3>Drinks</h3><span class="tr">İçecekler</span>
+      <div class="menu-category" id="rs-specials">
+        <div class="menu-cat-head">
+          <h3>Daily Specials</h3>
+          <p class="menu-cat-note">Ask a member of staff — Soup of the Day, Pasta of the Day.</p>
+        </div>
       </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Coca-Cola Original Taste (330ml Can)</span><span class="menu-item-desc">Sparkling soft drink with plant extracts</span></div><span class="menu-item-price">£2.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Diet Coke (330ml Can)</span><span class="menu-item-desc">Sparkling low-calorie soft drink with plant extracts and sweeteners</span></div><span class="menu-item-price">£2.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Coca-Cola Zero Sugar (330ml)</span><span class="menu-item-desc">Sparkling low-calorie soft drink with plant extracts and sweeteners</span></div><span class="menu-item-price">£2.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pepsi (330ml)</span><span class="menu-item-desc">Carbonated cola-flavoured soft drink with sugar and sweeteners</span></div><span class="menu-item-price">£2.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pepsi Max (330ml)</span><span class="menu-item-desc">Carbonated low-calorie cola-flavoured soft drink with sweeteners</span></div><span class="menu-item-price">£2.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Rio (330ml)</span></div><span class="menu-item-price">£2.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sprite Lemon Lime (330ml Can)</span><span class="menu-item-desc">Sparkling lemon-lime low-calorie soft drink with sugar and sweeteners</span></div><span class="menu-item-price">£2.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Water (500ml)</span></div><span class="menu-item-price">£2.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Ayran (300ml)</span><span class="menu-item-desc">Traditional yoghurt-based drink</span></div><span class="menu-item-price">£3.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Salgam (300ml)</span><span class="menu-item-desc">Traditional vegetable-based drink</span></div><span class="menu-item-price">£3.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fruit Shoot Apple &amp; Blackcurrant (200ml)</span></div><span class="menu-item-price">£1.75</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Red Bull Energy Drink (250ml)</span><span class="menu-item-desc">Energy drink</span></div><span class="menu-item-price">£2.75</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (330ml)<span class="tag age">18+</span></span><span class="menu-item-desc">5% vol</span></div><span class="menu-item-price">£4.50</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (500ml)<span class="tag age">18+</span></span><span class="menu-item-desc">5% vol</span></div><span class="menu-item-price">£6.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lipton Peach Ice Tea (500ml)</span><span class="menu-item-desc">Still soft drink with tea extract and peach juice, sugars and sweetener</span></div><span class="menu-item-price">£3.20</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lipton Lemon Ice Tea (500ml)</span><span class="menu-item-desc">Still soft drink with tea extract and lemon juice, sugars and sweetener</span></div><span class="menu-item-price">£3.20</span></div>
-      </div>
-    </div>
 
-    <!-- Sweet Treat -->
-    <div class="menu-category" id="menu-sweet">
-      <div class="menu-cat-head">
-        <h3>Sweet Treat</h3><span class="tr">Tatlı</span>
+      <div class="menu-category" id="rs-mains">
+        <div class="menu-cat-head">
+          <h3>Mains</h3><span class="tr">İzgara</span>
+          <p class="menu-cat-note">All kebabs served with mixed salad, Turkish rice &amp; Turkish bread (GF pita available +£1.75).</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Şiş</span></div><span class="menu-item-price">£17.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş</span></div><span class="menu-item-price">£13.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (8 Pieces)</span></div><span class="menu-item-price">£13.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Şiş (Lamb &amp; Chicken)</span></div><span class="menu-item-price">£20.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Şiş (Lamb &amp; Köfte)</span></div><span class="menu-item-price">£23.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mega Mix</span><span class="menu-item-desc">Lamb &amp; chicken şiş (6 pieces each), lamb köfte (3 pieces)</span></div><span class="menu-item-price">£29.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Köfte</span><span class="menu-item-desc">Fresh minced lamb, seasoned with herbs &amp; sweet red pepper</span></div><span class="menu-item-price">£17.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Veg with Halloumi or Falafel<span class="tag veg">V</span></span></div><span class="menu-item-price">£14.00</span></div>
+        </div>
       </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Baklava (4 Pieces)</span><span class="menu-item-desc">Layered filo pastry with nuts and sweet syrup — a rich Turkish treat</span></div><span class="menu-item-price">£6.00</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Millionaire Shortbread</span><span class="menu-item-desc">A buttery shortbread base topped with caramel and chocolate</span></div><span class="menu-item-price">£3.60</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Flapjack</span><span class="menu-item-desc">Made with oats and syrup — simple and tasty</span></div><span class="menu-item-price">£3.60</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Rocky Road with Marshmallows</span><span class="menu-item-desc">Crunchy chocolate squares loaded with marshmallows and biscuit pieces</span></div><span class="menu-item-price">£3.60</span></div>
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Italian Cannoli</span><span class="menu-item-desc">Crispy pastry filled with sweet</span></div><span class="menu-item-price">£2.10</span></div>
-      </div>
-    </div>
 
-    <!-- Sauces -->
-    <div class="menu-category" id="menu-sauces">
-      <div class="menu-cat-head">
-        <h3>Sauces</h3><span class="tr">Soslar</span>
+      <div class="menu-category" id="rs-burgers">
+        <div class="menu-cat-head">
+          <h3>Burgers</h3><span class="tr">Hamburger</span>
+          <p class="menu-cat-note">Served with seasoned chips, salad &amp; choice of sauce (add cheese £1 / grilled halloumi £2.50).</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Chicken Burger</span></div><span class="menu-item-price">£11.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger</span><span class="menu-item-desc">8oz flame-grilled pure beef, seeded bun</span></div><span class="menu-item-price">£12.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi Burger<span class="tag veg">V</span></span></div><span class="menu-item-price">£10.50</span></div>
+        </div>
       </div>
-      <div class="menu-list">
-        <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Extra Pot Sauces</span><span class="menu-item-desc">Pot of sauce</span></div><span class="menu-item-price">£1.20</span></div>
+
+      <div class="menu-category" id="rs-wraps">
+        <div class="menu-cat-head">
+          <h3>Wraps</h3><span class="tr">Dürüm</span>
+          <p class="menu-cat-note">Served with choice of salad and sauce (upgrade to Turkish bread +£1.50).</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wrap</span><span class="menu-item-desc">Large available for £14.00.</span></div><span class="menu-item-price">from £10.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kofte Wrap</span></div><span class="menu-item-price">£10.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Wrap</span></div><span class="menu-item-price">£11.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken &amp; Halloumi Wrap</span></div><span class="menu-item-price">£11.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Halloumi Wrap<span class="tag veg">V</span></span></div><span class="menu-item-price">£9.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel Wrap<span class="tag vegan">VE</span></span></div><span class="menu-item-price">£9.50</span></div>
+        </div>
       </div>
-    </div>
 
-    <div class="allergen-notice">
-      <h4>Allergen &amp; Dietary Information</h4>
-      <p>Our kitchen handles all 14 major allergens, including gluten, nuts, dairy, sesame and shellfish. If you have a food allergy or intolerance, please tell a member of staff before ordering — full allergen information for every dish is available on request, in person or by calling <a href="tel:+447368964617" style="color:var(--terracotta-dark);font-weight:600;">+44 7368 964617</a>.</p>
-    </div>
+      <div class="menu-category" id="rs-salads">
+        <div class="menu-cat-head">
+          <h3>Salads</h3><span class="tr">Salata</span>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Chicken Caesar</span></div><span class="menu-item-price">£11.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken &amp; Halloumi Salad</span></div><span class="menu-item-price">£12.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Turkish Salad</span></div><span class="menu-item-price">£10.00</span></div>
+        </div>
+      </div>
 
-    <p class="menu-cta">For takeaway or questions, call us on <a href="tel:+447368964617">+44 7368 964617</a></p>
-    <p class="menu-disclaimer">Prices correct as of 20 July 2026 — please confirm with staff for the latest menu.</p>
+      <div class="menu-category" id="rs-kids">
+        <div class="menu-cat-head">
+          <h3>Kids Meals</h3><span class="tr">Çocuk Menüsü</span>
+          <p class="menu-cat-note">Served with chips (ages 12 &amp; under).</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Nuggets (5 Pieces)</span></div><span class="menu-item-price">£7.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş (5 Pieces)</span></div><span class="menu-item-price">£7.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Şiş (5 Pieces)</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger</span></div><span class="menu-item-price">£7.00</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="rs-sides">
+        <div class="menu-cat-head">
+          <h3>Sides</h3><span class="tr">Mezeler</span>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seasoned Chips</span></div><span class="menu-item-price">£3.75</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Olives</span></div><span class="menu-item-price">£4.75</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Wings (6 Pieces)</span></div><span class="menu-item-price">£8.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Feta Cheese</span></div><span class="menu-item-price">£4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Rice</span></div><span class="menu-item-price">£3.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Salad</span></div><span class="menu-item-price">£3.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Bread</span></div><span class="menu-item-price">£3.00</span></div>
+        </div>
+      </div>
+
+      <div class="allergen-notice">
+        <p>All our meat is Halal. Please make us aware of any allergies or intolerances.</p>
+      </div>
+      <p class="menu-disclaimer">Prices correct as of 23 July 2026 — please confirm with staff for the latest menu.</p>
+    </div>
   </div>
 </section>
 
@@ -683,7 +1008,7 @@
       <div class="arch-frame">
         <div class="img-wrap"><picture>
           <source srcset="images/lamb-chops.webp" type="image/webp">
-          <img src="images/lamb-chops.jpg" alt="Mixed grill platter with lamb chops, chicken and kofta at Musti's Grill & Bistro" width="934" height="1168" loading="lazy">
+          <img src="images/lamb-chops.jpg" alt="Mixed grill platter with lamb chops, chicken and kofte at Musti's Grill & Bistro" width="934" height="1168" loading="lazy">
         </picture></div>
         <span>Lamb Chops</span>
       </div>
@@ -914,27 +1239,80 @@
   })();
 
   (function(){
-    var navLinks = Array.from(document.querySelectorAll('.menu-nav a'));
-    if(!navLinks.length || !('IntersectionObserver' in window)) return;
-    var sections = navLinks
-      .map(function(a){ return document.querySelector(a.getAttribute('href')); })
-      .filter(Boolean);
+    var menuSection = document.getElementById('menu');
+    if(!menuSection) return;
+    var tabs = Array.from(menuSection.querySelectorAll('.menu-tab'));
+    var panels = Array.from(menuSection.querySelectorAll('.menu-panel'));
 
-    function setActive(id){
+    var lastActive;
+    function setActive(navLinks, id){
+      if(id === lastActive) return;
+      lastActive = id;
       navLinks.forEach(function(a){
-        var isMatch = a.getAttribute('href') === '#' + id;
+        var isMatch = !!id && a.getAttribute('href') === '#' + id;
         a.classList.toggle('active', isMatch);
         if(isMatch) a.scrollIntoView({inline:'center', block:'nearest', behavior:'smooth'});
       });
     }
 
-    var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting) setActive(entry.target.id);
-      });
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    // Direct scroll-position check (rather than a narrow IntersectionObserver band)
+    // so the correct pill is highlighted immediately, even when a nav link jumps
+    // straight to the top of the Menu section rather than scrolling gradually.
+    // Only the currently visible tab panel's pills/categories are considered,
+    // so switching tabs automatically re-scopes which set of pills updates.
+    var THRESHOLD = 150;
+    var ticking = false;
+    function updateActive(){
+      ticking = false;
+      var activePanel = menuSection.querySelector('.menu-panel.active');
+      if(!activePanel) return;
+      var navLinks = Array.from(activePanel.querySelectorAll('.menu-nav a'));
+      if(!navLinks.length) return;
+      var sections = navLinks
+        .map(function(a){ return activePanel.querySelector(a.getAttribute('href')); })
+        .filter(Boolean);
+      if(!sections.length) return;
 
-    sections.forEach(function(s){ observer.observe(s); });
+      var mRect = menuSection.getBoundingClientRect();
+      if(mRect.bottom <= 0 || mRect.top >= window.innerHeight){ setActive(navLinks, null); return; }
+
+      var current = sections[0];
+      for(var i = 0; i < sections.length; i++){
+        if(sections[i].getBoundingClientRect().top - THRESHOLD <= 0) current = sections[i];
+      }
+      setActive(navLinks, current.id);
+    }
+    function onScroll(){
+      if(!ticking){ ticking = true; requestAnimationFrame(updateActive); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    // Anchor-link navigation changes the hash and jumps the scroll position,
+    // but doesn't always reliably fire a 'scroll' event in every browser —
+    // listen for the hash change directly as a backstop so the pill updates
+    // immediately even if no scroll event follows.
+    window.addEventListener('hashchange', function(){
+      requestAnimationFrame(updateActive);
+      setTimeout(updateActive, 50);
+    });
+
+    // Top-level Takeaway / Bistro / Restaurant tab switching.
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        var name = tab.getAttribute('data-tab');
+        tabs.forEach(function(t){
+          var isMatch = t === tab;
+          t.classList.toggle('active', isMatch);
+          t.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+        });
+        panels.forEach(function(p){ p.classList.toggle('active', p.getAttribute('data-panel') === name); });
+        lastActive = undefined;
+        requestAnimationFrame(updateActive);
+        setTimeout(updateActive, 50);
+      });
+    });
+
+    updateActive();
   })();
 
   (function(){
