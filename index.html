@@ -1377,7 +1377,7 @@
       if(!sections.length) return;
 
       var mRect = menuSection.getBoundingClientRect();
-      if(mRect.bottom <= 0 || mRect.top >= window.innerHeight){ setActive(navLinks, null); return; }
+      if(mRect.bottom <= 0 || mRect.top > THRESHOLD){ setActive(navLinks, null); return; }
 
       var current = sections[0];
       for(var i = 0; i < sections.length; i++){
