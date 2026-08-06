@@ -320,15 +320,15 @@
   @media(max-width:859px){.menu-nav{top:65px;}}
 
   /* ---------- Gallery ---------- */
-  .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;align-items:start;}
   @media(min-width:720px){.gallery-grid{grid-template-columns:repeat(3,1fr);}}
-  .arch-frame{
-    background:var(--paper);padding:10px 10px 16px;border-radius:150px 150px 10px 10px;
+  .photo-card{
+    background:var(--paper);padding:10px 10px 14px;border-radius:var(--radius);
     box-shadow:var(--shadow);border:1px solid rgba(199,154,61,.45);position:relative;
   }
-  .arch-frame .img-wrap{border-radius:110px 110px 4px 4px;overflow:hidden;aspect-ratio:4/5;border:2px solid var(--gold-light);background:var(--paper);}
-  .arch-frame .img-wrap img{width:100%;height:100%;object-fit:contain;}
-  .arch-frame span{font-family:'IBM Plex Mono',monospace;display:block;text-align:center;margin-top:10px;font-size:.78rem;letter-spacing:.05em;color:var(--teal-dark);font-weight:600;text-transform:uppercase;}
+  .photo-card .img-wrap{border-radius:calc(var(--radius) - 6px);overflow:hidden;border:1px solid var(--gold-light);}
+  .photo-card .img-wrap img{width:100%;height:auto;display:block;}
+  .photo-card span{font-family:'IBM Plex Mono',monospace;display:block;text-align:center;margin-top:10px;font-size:.78rem;letter-spacing:.05em;color:var(--teal-dark);font-weight:600;text-transform:uppercase;}
   .gallery-grid > *:nth-child(1){grid-column:span 2;}
   @media(min-width:720px){.gallery-grid > *:nth-child(1){grid-column:span 1;}}
 
@@ -1006,77 +1006,77 @@
       <p>Real photos from our bistro and kitchen on Horley High Street.</p>
     </div>
     <div class="gallery-grid">
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/shopfront-exterior.webp" type="image/webp">
           <img src="images/shopfront-exterior.jpg" alt="Musti's Grill & Bistro exterior and outdoor seating on Horley High Street" width="1080" height="1351" loading="lazy">
         </picture></div>
         <span>Our Bistro</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/mixed-grill-platter.webp" type="image/webp">
           <img src="images/mixed-grill-platter.jpg" alt="Mixed grill platter with falafel, grilled vegetables, rice and salad at Musti's Grill & Bistro" width="810" height="1013" loading="lazy">
         </picture></div>
         <span>Mixed Grill</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/lamb-chops.webp" type="image/webp">
           <img src="images/lamb-chops.jpg" alt="Mixed grill platter with lamb chops, chicken and kofte at Musti's Grill & Bistro" width="934" height="1168" loading="lazy">
         </picture></div>
         <span>Lamb Chops</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/beef-burger-chips.webp" type="image/webp">
           <img src="images/beef-burger-chips.jpg" alt="Flame-grilled beef burger with seasoned chips at Musti's Grill & Bistro" width="1080" height="704" loading="lazy">
         </picture></div>
         <span>Burgers</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/cover-fries-chicken.webp" type="image/webp">
           <img src="images/cover-fries-chicken.jpg" alt="Chicken şiş kebab platter with chips and tzatziki at Musti's Grill & Bistro" width="960" height="808" loading="lazy">
         </picture></div>
         <span>Kebab Platter</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/grilled-veg-halloumi-platter.webp" type="image/webp">
           <img src="images/grilled-veg-halloumi-platter.jpg" alt="Grilled halloumi and mixed vegetable skewers with flatbread and chips at Musti's Grill & Bistro" width="900" height="900" loading="lazy">
         </picture></div>
         <span>Halloumi &amp; Veg</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/grilled-chicken-burger-chips.webp" type="image/webp">
           <img src="images/grilled-chicken-burger-chips.jpg" alt="Grilled chicken burger with seasoned chips at Musti's Grill & Bistro" width="900" height="900" loading="lazy">
         </picture></div>
         <span>Chicken Burger</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/lamb-kofte-platter.webp" type="image/webp">
           <img src="images/lamb-kofte-platter.jpg" alt="Lamb köfte skewers with flatbread, chips and salad at Musti's Grill & Bistro" width="900" height="900" loading="lazy">
         </picture></div>
         <span>Köfte Platter</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/wrap-selection.webp" type="image/webp">
           <img src="images/wrap-selection.jpg" alt="Selection of three cut wraps showing falafel, kofte and chicken fillings at Musti's Grill & Bistro" width="900" height="900" loading="lazy">
         </picture></div>
         <span>Wrap Selection</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/grilled-chicken-wings.webp" type="image/webp">
           <img src="images/grilled-chicken-wings.jpg" alt="Flame-grilled chicken wings on flatbread at Musti's Grill & Bistro" width="900" height="900" loading="lazy">
         </picture></div>
         <span>Chicken Wings</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/baklava-pistachio.webp" type="image/webp">
           <img src="images/baklava-pistachio.jpg" alt="Pistachio baklava at Musti's Grill & Bistro" width="900" height="900" loading="lazy">
@@ -1101,28 +1101,28 @@
       <p>From Turkish tea to something stronger, drinks to match every plate.</p>
     </div>
     <div class="gallery-grid">
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/drink-frozen-strawberry.webp" type="image/webp">
           <img src="images/drink-frozen-strawberry.jpg" alt="Frozen strawberry drink garnished with strawberries, lemon and mint at Musti's Grill & Bistro" width="525" height="700" loading="lazy">
         </picture></div>
         <span>Frozen Strawberry</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/drink-lime-cocktail.webp" type="image/webp">
           <img src="images/drink-lime-cocktail.jpg" alt="Lime cocktail in a salt-rimmed glass at Musti's Grill & Bistro" width="560" height="700" loading="lazy">
         </picture></div>
         <span>Lime Cocktail</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/drink-orange-spritz.webp" type="image/webp">
           <img src="images/drink-orange-spritz.jpg" alt="Orange spritz garnished with orange, lime and strawberry at Musti's Grill & Bistro" width="700" height="700" loading="lazy">
         </picture></div>
         <span>Orange Spritz</span>
       </div>
-      <div class="arch-frame">
+      <div class="photo-card">
         <div class="img-wrap"><picture>
           <source srcset="images/drink-cola-cocktail.webp" type="image/webp">
           <img src="images/drink-cola-cocktail.jpg" alt="Cola cocktail garnished with berries and mint at Musti's Grill & Bistro" width="525" height="700" loading="lazy">
