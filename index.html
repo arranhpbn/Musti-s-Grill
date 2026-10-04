@@ -298,6 +298,8 @@
   .menu-nav a:hover{background:var(--terracotta);color:#fff;border-color:var(--terracotta);}
   .menu-nav a.active{background:var(--terracotta);color:#fff;border-color:var(--terracotta);}
   .menu-category{margin-top:44px;scroll-margin-top:145px;}
+  .menu-group-label{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-top:56px;padding-bottom:10px;border-bottom:1px solid rgba(14,94,99,.25);}
+  .menu-group-label.first{margin-top:28px;}
   .menu-cat-head{margin-bottom:16px;}
   .menu-cat-head h3{font-size:1.5rem;display:inline;margin-right:10px;}
   .menu-cat-head .tr{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);}
@@ -556,6 +558,7 @@
       <button class="menu-tab active" type="button" data-tab="takeaway" role="tab" aria-selected="true">Takeaway</button>
       <button class="menu-tab" type="button" data-tab="bistro" role="tab" aria-selected="false">Bistro (Day)</button>
       <button class="menu-tab" type="button" data-tab="restaurant" role="tab" aria-selected="false">Restaurant (Evening)</button>
+      <button class="menu-tab" type="button" data-tab="drinks" role="tab" aria-selected="false">Drinks</button>
     </div>
 
     <!-- ============ TAKEAWAY ============ -->
@@ -566,7 +569,6 @@
         <a href="#tk-wraps">Wraps</a>
         <a href="#tk-sides">Sides</a>
         <a href="#tk-kids">Kids Meals</a>
-        <a href="#tk-drinks">Drinks</a>
         <a href="#tk-sweet">Sweet Treat</a>
         <a href="#tk-sauces">Sauces</a>
       </nav>
@@ -578,6 +580,7 @@
         </div>
         <div class="menu-list">
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Şiş</span><span class="menu-item-desc">Tender cubed lamb, skewered then grilled on the flame. Large available for £18.00.</span></div><span class="menu-item-price">from £11.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Chops (4 Pieces)</span><span class="menu-item-desc">Tender chops grilled on the flame, slightly seasoned for a perfect taste.</span></div><span class="menu-item-price">£23.00</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş</span><span class="menu-item-desc">Mouth-watering chicken, skewered then grilled on the flame. Large available for £15.50.</span></div><span class="menu-item-price">from £9.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (8 Pieces)</span></div><span class="menu-item-price">£9.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (15 Pieces)</span></div><span class="menu-item-price">£16.00</span></div>
@@ -586,6 +589,7 @@
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mega Mix</span><span class="menu-item-desc">Lamb &amp; chicken şiş (6 pieces each), lamb köfte (3 pieces)</span></div><span class="menu-item-price">£23.00</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Köfte</span><span class="menu-item-desc">Fresh minced lamb, seasoned with herbs &amp; sweet red pepper, grilled on the flame. Large available for £18.00.</span></div><span class="menu-item-price">from £9.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Veg with Halloumi or Falafel<span class="tag veg">V</span></span></div><span class="menu-item-price">£9.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Musti's Family Special (Feeds a Family of 4)</span><span class="menu-item-desc">A mixture of chicken, lamb, chicken wings, lamb chops &amp; lamb köfte, served with bulgur rice, salad and bread.</span></div><span class="menu-item-price">£65.00</span></div>
         </div>
       </div>
 
@@ -613,7 +617,7 @@
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken &amp; Halloumi Wrap</span><span class="menu-item-desc">Delicious combination, served fresh off the grill</span></div><span class="menu-item-price">£10.00</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Halloumi Wrap<span class="tag veg">V</span></span><span class="menu-item-desc">Flame-grilled squeaky cheesy goodness</span></div><span class="menu-item-price">£8.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel Wrap<span class="tag vegan">VE</span></span><span class="menu-item-desc">Served with hummus and choice of salad</span></div><span class="menu-item-price">£9.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş Salad Box</span></div><span class="menu-item-price">£9.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş Salad Box</span></div><span class="menu-item-price">£10.00</span></div>
         </div>
       </div>
 
@@ -623,6 +627,7 @@
         </div>
         <div class="menu-list">
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Borek (4 Pieces)<span class="tag veg">V</span></span><span class="menu-item-desc">Filo pastry filled with feta cheese and herbs</span></div><span class="menu-item-price">£5.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Bulgur Rice</span></div><span class="menu-item-price">£3.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (6 Pieces)</span></div><span class="menu-item-price">£6.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seasoned Chips</span><span class="menu-item-desc">Large available for £5.00.</span></div><span class="menu-item-price">from £3.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cheesy Chips</span></div><span class="menu-item-price">£4.50</span></div>
@@ -646,22 +651,6 @@
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş x5 With Chips</span></div><span class="menu-item-price">£6.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Şiş x5 With Chips</span></div><span class="menu-item-price">£7.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger With Chips</span></div><span class="menu-item-price">£6.50</span></div>
-        </div>
-      </div>
-
-      <div class="menu-category" id="tk-drinks">
-        <div class="menu-cat-head">
-          <h3>Drinks</h3><span class="tr">İçecekler</span>
-        </div>
-        <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cans</span></div><span class="menu-item-price">£1.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Water</span></div><span class="menu-item-price">£1.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Ayran</span><span class="menu-item-desc">Traditional yoghurt-based drink</span></div><span class="menu-item-price">£2.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Salgam</span><span class="menu-item-desc">Traditional vegetable-based drink</span></div><span class="menu-item-price">£2.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fruit Shoot</span></div><span class="menu-item-price">£1.25</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Red Bull</span></div><span class="menu-item-price">£2.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (33cl)<span class="tag age">18+</span></span></div><span class="menu-item-price">£3.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (50cl)<span class="tag age">18+</span></span></div><span class="menu-item-price">£3.50</span></div>
         </div>
       </div>
 
@@ -693,7 +682,7 @@
       <div class="allergen-notice">
         <p>We take cash or card payments, on collection of your order. We are available for private hire. Please get in contact for more info.</p>
       </div>
-      <p class="menu-disclaimer">Prices correct as of 23 July 2026. Please confirm with staff for the latest menu.</p>
+      <p class="menu-disclaimer">Prices correct as of 4 October 2026. Please confirm with staff for the latest menu.</p>
     </div>
 
     <!-- ============ BISTRO (DAY) ============ -->
@@ -703,15 +692,12 @@
         <a href="#bs-toasted">Toasted Sandwiches</a>
         <a href="#bs-sandwiches">Sandwiches</a>
         <a href="#bs-jacket">Jacket Potatoes</a>
+        <a href="#bs-chef">Chef's Specials</a>
         <a href="#bs-salads">Salads</a>
         <a href="#bs-burgers">Burgers</a>
         <a href="#bs-wraps">Wraps</a>
         <a href="#bs-kids">Kids Meals</a>
         <a href="#bs-sides">Sides</a>
-        <a href="#bs-smoothies">Smoothies</a>
-        <a href="#bs-coffee">Coffee</a>
-        <a href="#bs-tea">Tea</a>
-        <a href="#bs-softdrinks">Soft Drinks</a>
       </nav>
 
       <div class="menu-category" id="bs-breakfast">
@@ -719,11 +705,11 @@
           <h3>Breakfast</h3>
         </div>
         <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Turkish Breakfast</span><span class="menu-item-desc">Fried eggs, spicy beef sucuk, grilled halloumi, hummus, feta cheese, olives, tomato &amp; cucumber, served with warm Turkish bread</span></div><span class="menu-item-price">£12.90</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Turkish Menemen</span><span class="menu-item-desc">Fluffy scrambled eggs with tomatoes, green peppers, onions and a hint of spices, served with warm Turkish bread</span></div><span class="menu-item-price">£9.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Turkish Breakfast</span><span class="menu-item-desc">Fried eggs, beef sucuk, grilled halloumi, hummus, feta cheese, olives, tomato &amp; cucumber, served with warm Turkish bread</span></div><span class="menu-item-price">£12.90</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Turkish Menemen</span><span class="menu-item-desc">Fluffy scrambled eggs with tomatoes, green peppers, onions and a hint of spices, served with warm Turkish bread</span></div><span class="menu-item-price">£9.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Full Breakfast</span><span class="menu-item-desc">Smoked turkey rashers, chicken sausages, eggs of choice, hash browns, grilled tomato, baked beans, mushrooms, crispy toast</span></div><span class="menu-item-price">£12.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Eggs Royal</span><span class="menu-item-desc">Two poached eggs on toasted sourdough, smoked salmon, hollandaise sauce, rocket, chives</span></div><span class="menu-item-price">£12.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Poached Eggs on Sourdough</span><span class="menu-item-desc">Add smashed avocado +£1.50 / wilted spinach &amp; grilled tomatoes +£2.00.</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Eggs Royal</span><span class="menu-item-desc">Three poached eggs on toasted sourdough, smoked salmon, hollandaise sauce, rocket, chives</span></div><span class="menu-item-price">£12.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Poached Eggs on Sourdough</span><span class="menu-item-desc">Add smashed avocado +£1.50 / wilted spinach &amp; grilled tomatoes +£2.00 / grilled sucuk +£2.50.</span></div><span class="menu-item-price">£8.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Omelettes</span><span class="menu-item-desc">Made to order, served with side salad. Create your own: cheese £1, halloumi £2, mushrooms £1, onion £1, tomato £1, spinach £1.50, sucuk £2.50, Turkish peppers £1.</span></div><span class="menu-item-price">£6.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pancakes</span><span class="menu-item-desc">Fresh seasonal fruit &amp; maple syrup</span></div><span class="menu-item-price">£9.50</span></div>
         </div>
@@ -735,8 +721,8 @@
         </div>
         <div class="menu-list">
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Mozzarella &amp; Pesto</span><span class="menu-item-desc">Grilled chicken, mozzarella, sun-dried tomatoes, red onion &amp; rocket</span></div><span class="menu-item-price">£9.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tuna Melt</span><span class="menu-item-desc">Tuna mayo, red onions &amp; melted mozzarella</span></div><span class="menu-item-price">£8.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Caprice Melt<span class="tag veg">V</span></span><span class="menu-item-desc">Mozzarella, sun-dried tomatoes &amp; fresh basil</span></div><span class="menu-item-price">£8.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tuna Melt</span><span class="menu-item-desc">Tuna mayo, red onions &amp; melted mozzarella</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Caprice Melt<span class="tag veg">V</span></span><span class="menu-item-desc">Mozzarella, sun-dried tomatoes &amp; fresh basil</span></div><span class="menu-item-price">£8.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pastrami Special</span><span class="menu-item-desc">Pastrami, Monterey Jack cheese, dill pickle, dijonnaise &amp; rocket</span></div><span class="menu-item-price">£10.00</span></div>
         </div>
       </div>
@@ -744,14 +730,14 @@
       <div class="menu-category" id="bs-sandwiches">
         <div class="menu-cat-head">
           <h3>Freshly Made Sandwiches</h3>
-          <p class="menu-cat-note">£6.50 each.</p>
+          <p class="menu-cat-note">£8.00 each.</p>
         </div>
         <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Coronation Chicken</span></div><span class="menu-item-price">£6.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Salad</span></div><span class="menu-item-price">£6.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tuna Mayo</span></div><span class="menu-item-price">£6.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cheese and Onion</span></div><span class="menu-item-price">£6.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pastrami</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Coronation Chicken</span></div><span class="menu-item-price">£8.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Salad</span></div><span class="menu-item-price">£8.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tuna Mayo</span></div><span class="menu-item-price">£8.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cheese and Onion</span></div><span class="menu-item-price">£8.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pastrami</span></div><span class="menu-item-price">£8.00</span></div>
         </div>
       </div>
 
@@ -762,6 +748,18 @@
         </div>
         <div class="menu-list">
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Jacket Potato</span><span class="menu-item-desc">Fillings: coronation chicken +£3, chicken Caesar salad +£3, baked beans +£2, beans &amp; cheese +£3, tuna mayo +£2.</span></div><span class="menu-item-price">£6.00</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="bs-chef">
+        <div class="menu-cat-head">
+          <h3>Chef's Specials</h3>
+          <p class="menu-cat-note">Served with Turkish rice, side salad, tzatziki (cacık) and Turkish bread (GF bread available +£1.75).</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Köfte</span></div><span class="menu-item-price">£12.95</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş</span></div><span class="menu-item-price">£12.95</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings</span></div><span class="menu-item-price">£12.95</span></div>
         </div>
       </div>
 
@@ -779,12 +777,12 @@
       <div class="menu-category" id="bs-burgers">
         <div class="menu-cat-head">
           <h3>Burgers</h3><span class="tr">Hamburger</span>
-          <p class="menu-cat-note">Served with seasoned chips, salad &amp; choice of sauce (add cheese £1 / grilled halloumi £2.50).</p>
+          <p class="menu-cat-note">Served with seasoned chips, salad &amp; choice of sauce (add cheese £1.50 / grilled halloumi £2.50).</p>
         </div>
         <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Chicken Burger</span><span class="menu-item-desc">Marinated overnight for unbeatable flavour</span></div><span class="menu-item-price">£10.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger</span><span class="menu-item-desc">8oz of flame-grilled pure beef on a seeded bun</span></div><span class="menu-item-price">£11.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi Burger<span class="tag veg">V</span></span><span class="menu-item-desc">Chargrilled halloumi stacked with fresh salad</span></div><span class="menu-item-price">£9.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Chicken Burger</span><span class="menu-item-desc">Marinated overnight for unbeatable flavour</span></div><span class="menu-item-price">£11.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Beef Burger</span><span class="menu-item-desc">8oz of flame-grilled pure beef on a seeded bun</span></div><span class="menu-item-price">£12.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi Burger<span class="tag veg">V</span></span><span class="menu-item-desc">Chargrilled halloumi stacked with fresh salad</span></div><span class="menu-item-price">£10.50</span></div>
         </div>
       </div>
 
@@ -794,12 +792,12 @@
           <p class="menu-cat-note">All wraps served with salad &amp; choice of sauce (upgrade to Turkish bread +£1.50).</p>
         </div>
         <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wrap</span><span class="menu-item-desc">Large available for £14.00.</span></div><span class="menu-item-price">from £9.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kofte Wrap</span></div><span class="menu-item-price">£9.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Wrap</span></div><span class="menu-item-price">£10.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken &amp; Halloumi Wrap</span></div><span class="menu-item-price">£10.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Halloumi Wrap<span class="tag veg">V</span></span></div><span class="menu-item-price">£9.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel Wrap<span class="tag vegan">VE</span></span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wrap</span><span class="menu-item-desc">Large available for £14.00.</span></div><span class="menu-item-price">from £10.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kofte Wrap</span><span class="menu-item-desc">Large available for £15.00.</span></div><span class="menu-item-price">from £10.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Wrap</span><span class="menu-item-desc">Large available for £15.50.</span></div><span class="menu-item-price">from £11.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken &amp; Halloumi Wrap</span><span class="menu-item-desc">Large available for £15.00.</span></div><span class="menu-item-price">from £11.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Halloumi Wrap<span class="tag veg">V</span></span><span class="menu-item-desc">Large available for £13.00.</span></div><span class="menu-item-price">from £9.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel Wrap<span class="tag vegan">VE</span></span><span class="menu-item-desc">Large available for £13.00.</span></div><span class="menu-item-price">from £9.50</span></div>
         </div>
       </div>
 
@@ -819,77 +817,22 @@
           <h3>Sides</h3><span class="tr">Mezeler</span>
         </div>
         <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Borek (4 Pieces)<span class="tag veg">V</span></span><span class="menu-item-desc">Filo pastry filled with feta cheese and herbs</span></div><span class="menu-item-price">£5.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seasoned Chips</span></div><span class="menu-item-price">£3.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Borek (4 Pieces)<span class="tag veg">V</span></span><span class="menu-item-desc">Filo pastry filled with feta cheese and herbs</span></div><span class="menu-item-price">£5.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Seasoned Chips</span><span class="menu-item-desc">Large available for £5.00.</span></div><span class="menu-item-price">from £3.75</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cheesy Chips</span></div><span class="menu-item-price">£4.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi</span></div><span class="menu-item-price">£5.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hummus &amp; Turkish Bread</span></div><span class="menu-item-price">£5.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Green Olives</span></div><span class="menu-item-price">£4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Green Olives</span></div><span class="menu-item-price">£4.75</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sucuk</span></div><span class="menu-item-price">£4.00</span></div>
-        </div>
-      </div>
-
-      <div class="menu-category" id="bs-smoothies">
-        <div class="menu-cat-head">
-          <h3>Smoothies</h3>
-          <p class="menu-cat-note">£4.50 each.</p>
-        </div>
-        <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Green River</span><span class="menu-item-desc">Banana, kale, mango and lemongrass</span></div><span class="menu-item-price">£4.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pineapple Sunset</span><span class="menu-item-desc">Pineapple, papaya and mango</span></div><span class="menu-item-price">£4.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Raspberry Heaven</span><span class="menu-item-desc">Apple, raspberry, mango and blueberry</span></div><span class="menu-item-price">£4.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Passion Storm</span><span class="menu-item-desc">Pineapple, papaya, passion fruit, guava purée, aloe vera juice</span></div><span class="menu-item-price">£4.50</span></div>
-        </div>
-      </div>
-
-      <div class="menu-category" id="bs-coffee">
-        <div class="menu-cat-head">
-          <h3>Coffee</h3>
-          <p class="menu-cat-note">Alternative milks &amp; syrups available, +£0.60.</p>
-        </div>
-        <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Espresso</span><span class="menu-item-desc">Double available for £3.20.</span></div><span class="menu-item-price">from £2.80</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cortado</span></div><span class="menu-item-price">£3.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Americano</span><span class="menu-item-desc">Regular available for £3.40.</span></div><span class="menu-item-price">from £3.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Flat White</span></div><span class="menu-item-price">£3.60</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Latte</span><span class="menu-item-desc">Regular available for £4.00.</span></div><span class="menu-item-price">from £3.80</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cappuccino</span><span class="menu-item-desc">Regular available for £4.00.</span></div><span class="menu-item-price">from £3.80</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mocha</span><span class="menu-item-desc">Regular available for £4.40.</span></div><span class="menu-item-price">from £4.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hot Chocolate</span><span class="menu-item-desc">Regular available for £4.00.</span></div><span class="menu-item-price">from £3.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chai Latte</span><span class="menu-item-desc">Regular available for £4.20.</span></div><span class="menu-item-price">from £3.80</span></div>
-        </div>
-      </div>
-
-      <div class="menu-category" id="bs-tea">
-        <div class="menu-cat-head">
-          <h3>Tea</h3>
-        </div>
-        <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">English Breakfast</span></div><span class="menu-item-price">£2.40</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Earl Grey</span></div><span class="menu-item-price">£2.80</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Selection of Herbal Teas</span></div><span class="menu-item-price">£2.40</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pot of Turkish Tea</span></div><span class="menu-item-price">£4.50</span></div>
-        </div>
-      </div>
-
-      <div class="menu-category" id="bs-softdrinks">
-        <div class="menu-cat-head">
-          <h3>Soft Drinks</h3>
-        </div>
-        <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Selection of Bottled Soft Drinks</span></div><span class="menu-item-price">£3.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fresh Orange Juice</span></div><span class="menu-item-price">£4.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Apple Juice</span></div><span class="menu-item-price">£3.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cranberry Juice</span></div><span class="menu-item-price">£3.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Still Water</span></div><span class="menu-item-price">£2.80</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sparkling Water</span></div><span class="menu-item-price">£2.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Tzatziki / Cacık</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Wings (6 Pieces)</span></div><span class="menu-item-price">£8.00</span></div>
         </div>
       </div>
 
       <div class="allergen-notice">
         <p>We take cash or card, and pre-orders are available. We are available for private hires and functions, so please ask a member of staff. We also supply BBQ boxes, just ask for information.</p>
       </div>
-      <p class="menu-disclaimer">Prices correct as of 23 July 2026. Please confirm with staff for the latest menu.</p>
+      <p class="menu-disclaimer">Prices correct as of 4 October 2026. Please confirm with staff for the latest menu.</p>
     </div>
 
     <!-- ============ RESTAURANT (EVENING) ============ -->
@@ -909,14 +852,16 @@
           <h3>Starters</h3><span class="tr">Başlangıçlar</span>
         </div>
         <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hummus<span class="tag vegan">VE</span></span><span class="menu-item-desc">Creamy blended chickpeas with tahini, garlic &amp; lemon, drizzled with olive oil, served with warm Turkish bread</span></div><span class="menu-item-price">£4.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cacık<span class="tag veg">V</span></span><span class="menu-item-desc">Yoghurt, cucumber, garlic &amp; mint, served with warm bread</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hummus<span class="tag vegan">VE</span></span><span class="menu-item-desc">Creamy blended chickpeas with tahini, garlic &amp; lemon, drizzled with olive oil, served with warm Turkish bread</span></div><span class="menu-item-price">£5.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cacık<span class="tag veg">V</span></span><span class="menu-item-desc">Yoghurt, cucumber, garlic &amp; mint, served with warm bread (no bread with takeaway)</span></div><span class="menu-item-price">£4.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Ezme<span class="tag vegan">VE</span></span><span class="menu-item-desc">Finely chopped tomatoes, onions, parsley &amp; peppers with a spicy kick, a classic Anatolian salsa</span></div><span class="menu-item-price">£4.75</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Halloumi<span class="tag veg">V</span></span></div><span class="menu-item-price">£5.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Sucuk (4 Pieces)</span><span class="menu-item-desc">Traditional Turkish beef sausage</span></div><span class="menu-item-price">£5.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel (4 Pieces)<span class="tag vegan">VE</span></span><span class="menu-item-desc">Served on a bed of hummus</span></div><span class="menu-item-price">£5.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sigara Börek / Cheese Rolls<span class="tag veg">V</span></span><span class="menu-item-desc">Crispy filo pastry filled with feta and parsley</span></div><span class="menu-item-price">£5.25</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Meze Plate (for 2)</span><span class="menu-item-desc">Hummus, cacık, ezme, grilled halloumi, grilled sucuk, olives and sigara börek, served with warm bread</span></div><span class="menu-item-price">£15.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Prawns</span><span class="menu-item-desc">Pan-fried prawns in a garlic and chilli butter with a splash of white wine.</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Calamari</span><span class="menu-item-desc">Calamari rings served with a garlic mayo dip and a wedge of lemon.</span></div><span class="menu-item-price">£6.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sigara Börek / Cheese Rolls<span class="tag veg">V</span></span><span class="menu-item-desc">Crispy filo pastry filled with feta and parsley</span></div><span class="menu-item-price">£5.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Meze Plate (for 2)</span><span class="menu-item-desc">Hummus, cacık, ezme, grilled halloumi, grilled sucuk, olives and sigara börek, served with warm bread</span></div><span class="menu-item-price">£16.50</span></div>
         </div>
       </div>
 
@@ -927,9 +872,11 @@
         </div>
         <div class="menu-list">
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Şiş</span></div><span class="menu-item-price">£17.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş</span></div><span class="menu-item-price">£13.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Chops (4 Pieces)</span><span class="menu-item-desc">Perfectly marinated lamb chops, grilled to perfection.</span></div><span class="menu-item-price">£23.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Şiş</span></div><span class="menu-item-price">£14.50</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wings (8 Pieces)</span></div><span class="menu-item-price">£13.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Şiş (Lamb &amp; Chicken)</span></div><span class="menu-item-price">£20.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Musti's House Special (Feeds a Family of 4)</span><span class="menu-item-desc">A mixture of chicken, lamb şiş, chicken wings, lamb köfte and lamb chops.</span></div><span class="menu-item-price">£65.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Şiş (Lamb &amp; Chicken)</span></div><span class="menu-item-price">£21.00</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mixed Şiş (Lamb &amp; Köfte)</span></div><span class="menu-item-price">£23.00</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mega Mix</span><span class="menu-item-desc">Lamb &amp; chicken şiş (6 pieces each), lamb köfte (3 pieces)</span></div><span class="menu-item-price">£29.00</span></div>
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Köfte</span><span class="menu-item-desc">Fresh minced lamb, seasoned with herbs &amp; sweet red pepper</span></div><span class="menu-item-price">£17.50</span></div>
@@ -940,7 +887,7 @@
       <div class="menu-category" id="rs-burgers">
         <div class="menu-cat-head">
           <h3>Burgers</h3><span class="tr">Hamburger</span>
-          <p class="menu-cat-note">Served with seasoned chips, salad &amp; choice of sauce (add cheese £1 / grilled halloumi £2.50).</p>
+          <p class="menu-cat-note">Served with seasoned chips, salad &amp; choice of sauce (add cheese £1.50 / grilled halloumi £2.50).</p>
         </div>
         <div class="menu-list">
           <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Grilled Chicken Burger</span></div><span class="menu-item-price">£11.50</span></div>
@@ -955,12 +902,12 @@
           <p class="menu-cat-note">Served with choice of salad and sauce (upgrade to Turkish bread +£1.50).</p>
         </div>
         <div class="menu-list">
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wrap</span><span class="menu-item-desc">Large available for £14.00.</span></div><span class="menu-item-price">from £10.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kofte Wrap</span></div><span class="menu-item-price">£10.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Wrap</span></div><span class="menu-item-price">£11.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken &amp; Halloumi Wrap</span></div><span class="menu-item-price">£11.50</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Halloumi Wrap<span class="tag veg">V</span></span></div><span class="menu-item-price">£9.00</span></div>
-          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel Wrap<span class="tag vegan">VE</span></span></div><span class="menu-item-price">£9.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken Wrap</span><span class="menu-item-desc">Large available for £15.00.</span></div><span class="menu-item-price">from £11.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Kofte Wrap</span></div><span class="menu-item-price">£11.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lamb Wrap</span></div><span class="menu-item-price">£12.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chicken &amp; Halloumi Wrap</span></div><span class="menu-item-price">£12.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Halloumi Wrap<span class="tag veg">V</span></span></div><span class="menu-item-price">£10.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Falafel Wrap<span class="tag vegan">VE</span></span></div><span class="menu-item-price">£10.50</span></div>
         </div>
       </div>
 
@@ -1006,7 +953,163 @@
       <div class="allergen-notice">
         <p>Please make us aware of any allergies or intolerances.</p>
       </div>
-      <p class="menu-disclaimer">Prices correct as of 23 July 2026. Please confirm with staff for the latest menu.</p>
+      <p class="menu-disclaimer">Prices correct as of 4 October 2026. Please confirm with staff for the latest menu.</p>
+    </div>
+
+    <!-- ============ DRINKS ============ -->
+    <div class="menu-panel" data-panel="drinks">
+      <nav class="menu-nav" aria-label="Drinks categories">
+        <a href="#dr-takeaway">Takeaway</a>
+        <a href="#dr-soft">Soft Drinks</a>
+        <a href="#dr-coffee">Coffee</a>
+        <a href="#dr-tea">Tea</a>
+        <a href="#dr-ciders">Ciders &amp; Ale</a>
+        <a href="#dr-spirits">Spirits</a>
+        <a href="#dr-beers">Bottled Beers</a>
+        <a href="#dr-cocktails">Cocktails</a>
+      </nav>
+
+      <div class="menu-group-label first">Takeaway Drinks</div>
+
+      <div class="menu-category" id="dr-takeaway">
+        <div class="menu-cat-head">
+          <h3>Drinks</h3><span class="tr">İçecekler</span>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cans</span></div><span class="menu-item-price">£1.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Water</span></div><span class="menu-item-price">£1.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Ayran</span><span class="menu-item-desc">Traditional yoghurt-based drink</span></div><span class="menu-item-price">£2.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Salgam</span><span class="menu-item-desc">Traditional vegetable-based drink</span></div><span class="menu-item-price">£2.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fruit Shoot</span></div><span class="menu-item-price">£1.25</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Red Bull</span></div><span class="menu-item-price">£2.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (33cl)<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (50cl)<span class="tag age">18+</span></span></div><span class="menu-item-price">£5.00</span></div>
+        </div>
+      </div>
+
+      <div class="menu-group-label">Dine-in Drinks</div>
+
+      <div class="menu-category" id="dr-soft">
+        <div class="menu-cat-head">
+          <h3>Soft Drinks</h3>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Coke, Diet Coke, Coke Zero</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fanta Orange</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Sprite</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Appetiser</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fruit Juice</span><span class="menu-item-desc">Apple, orange or cranberry.</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Freshly Squeezed Orange Juice</span></div><span class="menu-item-price">£4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Smoothies</span><span class="menu-item-desc">Please ask for flavours.</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Ayran</span><span class="menu-item-desc">Traditional Turkish yoghurt drink.</span></div><span class="menu-item-price">£2.30</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Salgam</span><span class="menu-item-desc">Turnip juice.</span></div><span class="menu-item-price">£2.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Soda Water</span></div><span class="menu-item-price">£2.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Still / Sparkling Water</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Milkshakes</span><span class="menu-item-desc">Please ask for flavours.</span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Lipton Ice Tea</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Fruit Shoot</span></div><span class="menu-item-price">£1.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="dr-coffee">
+        <div class="menu-cat-head">
+          <h3>Coffee</h3>
+          <p class="menu-cat-note">Alternative milks &amp; syrups available, +£0.75.</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Espresso</span><span class="menu-item-desc">Double available for £3.00.</span></div><span class="menu-item-price">from £2.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cortado</span></div><span class="menu-item-price">£3.25</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Americano</span><span class="menu-item-desc">Large available for £3.75.</span></div><span class="menu-item-price">from £3.25</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Flat White</span></div><span class="menu-item-price">£3.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Latte</span><span class="menu-item-desc">Large available for £4.20.</span></div><span class="menu-item-price">from £3.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Cappuccino</span><span class="menu-item-desc">Regular available for £4.00.</span></div><span class="menu-item-price">from £3.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mocha</span><span class="menu-item-desc">Regular available for £4.40.</span></div><span class="menu-item-price">from £4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hot Chocolate</span><span class="menu-item-desc">Regular available for £4.00.</span></div><span class="menu-item-price">from £3.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Chai Latte</span><span class="menu-item-desc">Large available for £4.20.</span></div><span class="menu-item-price">from £3.90</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="dr-tea">
+        <div class="menu-cat-head">
+          <h3>Tea</h3>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">English Breakfast</span></div><span class="menu-item-price">£2.40</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Earl Grey</span></div><span class="menu-item-price">£2.80</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Selection of Herbal Teas</span></div><span class="menu-item-price">£3.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pot of Turkish Tea</span></div><span class="menu-item-price">£4.50</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="dr-ciders">
+        <div class="menu-cat-head">
+          <h3>Ciders &amp; Ale</h3>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Rekorderlig Strawberry-Lime<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.90</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Old Mout Pineapple &amp; Raspberry<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.90</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Abbot Ale<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.90</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="dr-spirits">
+        <div class="menu-cat-head">
+          <h3>Spirits</h3>
+          <p class="menu-cat-note">Make it a double for an extra £2.50.</p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Absolute Vodka<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Smirnoff Vodka<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Bombay Sapphire Blue<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Gordons Gin<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Gordons Pink Gin<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Bacardi<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Malibu<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.00</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Captain Morgan (Spice Gold)<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Hennessy<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Jack Daniels<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Jameson<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Bailey's<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.00</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="dr-beers">
+        <div class="menu-cat-head">
+          <h3>Bottled Beers</h3>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes (500ml)<span class="tag age">18+</span></span></div><span class="menu-item-price">£5.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Efes Pilsner (330ml)<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Peroni<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Corona<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Birra Moretti<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">San Miguel<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Madri<span class="tag age">18+</span></span></div><span class="menu-item-price">£4.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Peroni (Alcohol Free)</span></div><span class="menu-item-price">£3.75</span></div>
+        </div>
+      </div>
+
+      <div class="menu-category" id="dr-cocktails">
+        <div class="menu-cat-head">
+          <h3>Cocktails</h3>
+        </div>
+        <div class="menu-list">
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Long Island Iced Tea<span class="tag age">18+</span></span><span class="menu-item-desc">Vodka, gin, rum, tequila, triple sec, fresh lemon &amp; cola. Bold, boozy, and deceptively smooth.</span></div><span class="menu-item-price">£9.75</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Classic Pimm's<span class="tag age">18+</span></span><span class="menu-item-desc">Pimm's No.1, lemonade, fresh mint &amp; seasonal fruit. Light, refreshing, and perfect for sipping.</span></div><span class="menu-item-price">£7.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Mojito<span class="tag age">18+</span></span><span class="menu-item-desc">White rum, fresh lime, mint, sugar &amp; soda. Crisp, zesty, and endlessly refreshing.</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Margarita<span class="tag age">18+</span></span><span class="menu-item-desc">Tequila, triple sec &amp; fresh lime juice. Sharp, citrusy, and perfectly balanced.</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Strawberry Daiquiri<span class="tag age">18+</span></span><span class="menu-item-desc">White rum, strawberries &amp; lime. Sweet, fruity, and irresistibly smooth.</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Espresso Martini<span class="tag age">18+</span></span><span class="menu-item-desc">Vodka, coffee liqueur &amp; fresh espresso. Rich, smooth, and guaranteed to wake the party up.</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Limoncello Thyme<span class="tag age">18+</span></span><span class="menu-item-desc">Limoncello, prosecco, soda &amp; fresh thyme. Bright, herbal, and beautifully refreshing.</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Pornstar Martini<span class="tag age">18+</span></span><span class="menu-item-desc">Vanilla vodka, passionfruit &amp; a shot of prosecco. Sweet, tropical, and a total crowd-pleaser.</span></div><span class="menu-item-price">£8.50</span></div>
+          <div class="menu-item"><div class="menu-item-info"><span class="menu-item-name">Aperol Spritz<span class="tag age">18+</span></span><span class="menu-item-desc">Aperol, prosecco &amp; soda. Lightly bitter, bubbly, and effortlessly chic.</span></div><span class="menu-item-price">£8.50</span></div>
+        </div>
+      </div>
+
+      <div class="allergen-notice">
+        <p>Please make us aware of any allergies or intolerances.</p>
+      </div>
+      <p class="menu-disclaimer">Prices correct as of 4 October 2026. Please confirm with staff for the latest menu.</p>
     </div>
   </div>
 </section>
