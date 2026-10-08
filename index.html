@@ -249,6 +249,32 @@
   .hero-address{margin-top:26px;font-size:.9rem;color:#E9DCC4;display:flex;align-items:center;gap:8px;flex-wrap:wrap;text-shadow:0 1px 5px rgba(0,0,0,.5);}
   .hero-address a{text-decoration:underline;text-decoration-color:rgba(255,255,255,.4);}
 
+  /* ---------- Christmas set menu (christmas: temporary, remove with the #christmas section) ---------- */
+  .xmas-card{position:relative;background:var(--teal-dark);color:var(--cream);border-radius:22px;padding:52px 28px 40px;box-shadow:var(--shadow);border:1px solid rgba(227,193,115,.5);}
+  .xmas-card::before{content:"";position:absolute;inset:10px;border:1px solid rgba(227,193,115,.3);border-radius:14px;pointer-events:none;}
+  .xmas-card > *{position:relative;}
+  .xmas-head{text-align:center;max-width:680px;margin:0 auto 36px;}
+  .xmas-eyebrow{justify-content:center;color:var(--gold-light);}
+  .xmas-head h2{color:#fff;font-size:clamp(2.1rem,5vw,3.2rem);margin-bottom:.15em;}
+  .xmas-tagline{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);margin:0 0 24px;}
+  .xmas-price{display:inline-flex;flex-direction:column;gap:6px;padding:16px 30px;border-radius:18px;background:rgba(0,0,0,.25);border:1px solid var(--gold-light);}
+  .xmas-price-main{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(1.25rem,3.2vw,1.75rem);color:#fff;}
+  .xmas-price-sub{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-light);}
+  .xmas-courses{display:grid;grid-template-columns:1fr;gap:34px;}
+  @media(min-width:900px){.xmas-courses{grid-template-columns:1.2fr 1fr 1fr;gap:44px;}}
+  .xmas-course h3{color:var(--gold-light);font-size:1.45rem;text-align:center;padding-bottom:10px;border-bottom:1px solid rgba(227,193,115,.35);margin-bottom:18px;}
+  .xmas-course ul{list-style:none;margin:0;padding:0;display:grid;gap:18px;}
+  .xmas-dish{display:block;font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.06rem;color:#fff;}
+  .xmas-desc{display:block;font-size:.92rem;color:rgba(250,243,230,.82);margin-top:2px;}
+  .xmas-card .tag.spicy{background:#F5E1DA;color:var(--terracotta-dark);}
+  .xmas-foot{text-align:center;margin-top:38px;padding-top:28px;border-top:1px solid rgba(227,193,115,.35);}
+  .xmas-when{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.2rem;color:#fff;margin:0 0 6px;}
+  .xmas-book{color:rgba(250,243,230,.88);margin:0 0 20px;}
+  .xmas-contact{display:flex;gap:16px 22px;justify-content:center;align-items:center;flex-wrap:wrap;}
+  .xmas-email{color:var(--gold-light);font-weight:600;}
+  .xmas-allergy{font-size:.82rem;font-style:italic;color:rgba(250,243,230,.72);margin:20px 0 0;}
+  @media(max-width:600px){.xmas-card{padding:44px 18px 32px;}.xmas-contact .btn{white-space:normal;text-align:center;}}
+
   /* ---------- About ---------- */
   .about-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;}
   .about-photo{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:6px solid var(--paper);outline:1px solid rgba(199,154,61,.5);}
@@ -342,11 +368,11 @@
   .arch-frame .img-wrap{border-radius:140px 140px 4px 4px;overflow:hidden;aspect-ratio:3/4;border:2px solid var(--gold-light);}
   .arch-frame .img-wrap img{width:100%;height:100%;object-fit:cover;}
   .arch-frame span{font-family:'IBM Plex Mono',monospace;display:block;text-align:center;margin-top:10px;font-size:.78rem;letter-spacing:.05em;color:var(--teal-dark);font-weight:600;text-transform:uppercase;}
-  /* Slight pinned-snapshot tilt on a few photos, for a less uniform, more handmade feel */
-  .arch-frame.tilt-a,.arch-frame.tilt-b{transition:transform .2s ease;box-shadow:0 14px 28px -10px rgba(43,33,26,.4);}
-  .arch-frame.tilt-a{transform:rotate(-2.2deg);}
-  .arch-frame.tilt-b{transform:rotate(1.8deg);}
-  .arch-frame.tilt-a:hover,.arch-frame.tilt-b:hover{transform:rotate(0deg) scale(1.02);}
+  /* Slight pinned-snapshot tilt on every photo after the large first one, straightening on hover */
+  .gallery-grid > .arch-frame:not(:first-child){transition:transform .2s ease;box-shadow:0 14px 28px -10px rgba(43,33,26,.4);}
+  .gallery-grid > .arch-frame:nth-child(even){transform:rotate(-2.2deg);}
+  .gallery-grid > .arch-frame:nth-child(odd):not(:first-child){transform:rotate(1.8deg);}
+  .gallery-grid > .arch-frame:not(:first-child):hover{transform:rotate(0deg) scale(1.02);}
   .gallery-grid > *:nth-child(1){grid-column:span 2;}
   @media(min-width:720px){.gallery-grid > *:nth-child(1){grid-column:span 1;}}
 
@@ -441,6 +467,7 @@
       <span class="brand-text">Musti's Grill & Bistro<small>Horley, Surrey</small></span>
     </a>
     <nav class="site-nav" aria-label="Section navigation">
+      <a href="#christmas">Christmas Menu</a><!-- christmas -->
       <a href="#menu">Menu</a>
       <a href="#about">About</a>
       <a href="#gallery">Gallery</a>
@@ -456,6 +483,7 @@
     </button>
   </div>
   <nav class="mobile-nav" id="mobileNav" aria-label="Section navigation">
+    <a href="#christmas">Christmas Menu</a><!-- christmas -->
     <a href="#menu">Menu</a>
     <a href="#about">About</a>
     <a href="#gallery">Gallery</a>
@@ -485,6 +513,69 @@
 </section>
 
 <div class="tile-divider" aria-hidden="true"></div>
+
+<!-- ===== CHRISTMAS SET MENU: TEMPORARY. To remove after Christmas, delete this whole block (START to END), the two "Christmas Menu" nav links in the header, and the "christmas" CSS block. ===== -->
+<!-- START CHRISTMAS -->
+<section id="christmas">
+  <div class="container">
+    <div class="xmas-card">
+      <div class="xmas-head">
+        <div class="eyebrow xmas-eyebrow">Celebrate the season with us!</div>
+        <h2>Christmas Set Menu</h2>
+        <p class="xmas-tagline">Good Food &middot; Great Company &middot; Festive Vibes</p>
+        <div class="xmas-price">
+          <span class="xmas-price-main">3 Courses &nbsp;|&nbsp; &pound;35.95 per person</span>
+          <span class="xmas-price-sub">Includes a glass of prosecco on arrival</span>
+        </div>
+      </div>
+
+      <div class="xmas-courses">
+        <div class="xmas-course">
+          <h3>Starters</h3>
+          <ul>
+          <li><span class="xmas-dish">Hummus<span class="tag vegan">VE</span></span><span class="xmas-desc">Creamy blended chickpeas with tahini, garlic &amp; lemon. Drizzled with olive oil.</span></li>
+          <li><span class="xmas-dish">Cacık<span class="tag veg">V</span></span><span class="xmas-desc">A refreshing dip of yoghurt, cucumber, garlic &amp; mint.</span></li>
+          <li><span class="xmas-dish">Ezme<span class="tag vegan">VE</span><span class="tag spicy">Spicy</span></span><span class="xmas-desc">Finely chopped tomatoes, onions, parsley, and peppers with a spicy kick.</span></li>
+          <li><span class="xmas-dish">Grilled Halloumi<span class="tag veg">V</span></span><span class="xmas-desc">Flame-grilled slices of squeaky cheese.</span></li>
+          <li><span class="xmas-dish">Falafel (3 pcs)<span class="tag vegan">VE</span></span><span class="xmas-desc">Crispy chickpea patties, seasoned with herbs &amp; spices. Served with tahini or chilli sauce.</span></li>
+          <li><span class="xmas-dish">Calamari</span><span class="xmas-desc">Calamari rings served with a garlic mayo dip and a wedge of lemon.</span></li>
+          <li><span class="xmas-dish">Sigara Börek (Cheese Rolls)<span class="tag veg">V</span></span><span class="xmas-desc">Crispy filo pastry rolls filled with feta and parsley.</span></li>
+          </ul>
+        </div>
+        <div class="xmas-course">
+          <h3>Mains</h3>
+          <ul>
+          <li><span class="xmas-dish">Lamb Şiş</span><span class="xmas-desc">Tender cubed lamb, skewered then grilled on the flame.</span></li>
+          <li><span class="xmas-dish">Chicken Şiş</span><span class="xmas-desc">Mouth-watering chicken, skewered then grilled on the flame.</span></li>
+          <li><span class="xmas-dish">Köfte</span><span class="xmas-desc">Fresh minced lamb, seasoned with herbs &amp; sweet red pepper. Grilled on the flame.</span></li>
+          <li><span class="xmas-dish">Mixed Grilled Vegetables with Halloumi<span class="tag veg">V</span></span><span class="xmas-desc">Flame-grilled vegetables paired with either halloumi or falafel.</span></li>
+          </ul>
+        </div>
+        <div class="xmas-course">
+          <h3>Desserts</h3>
+          <ul>
+          <li><span class="xmas-dish">Baklava</span><span class="xmas-desc">Layers of filo pastry, nuts and honey.</span></li>
+          <li><span class="xmas-dish">Chocolate Fudge Cake</span><span class="xmas-desc">Served with vanilla ice cream.</span></li>
+          <li><span class="xmas-dish">Vanilla Ice Cream or Sorbet<span class="tag veg">V</span></span><span class="xmas-desc">A light and refreshing finish.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="xmas-foot">
+        <p class="xmas-when">Available 1st to 22nd December, Wednesday to Saturday only.</p>
+        <p class="xmas-book">Please call ahead to book. A deposit is required to secure your booking.</p>
+        <div class="xmas-contact">
+          <a class="btn btn-primary" href="tel:+447368964617"><svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Book Now &middot; 07368 964617</a>
+          <a class="xmas-email" href="mailto:mustis_grill@hotmail.com">mustis_grill@hotmail.com</a>
+        </div>
+        <p class="xmas-allergy">Please make us aware of any allergies or intolerances.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="tile-divider flip" aria-hidden="true"></div>
+<!-- END CHRISTMAS -->
 
 <!-- ================= ABOUT ================= -->
 <section id="about">
@@ -1133,7 +1224,7 @@
         </picture></div>
         <span>Our Bistro</span>
       </div>
-      <div class="arch-frame tilt-a">
+      <div class="arch-frame">
         <div class="img-wrap"><picture>
           <source srcset="images/mixed-grill-platter.webp" type="image/webp">
           <img src="images/mixed-grill-platter.jpg" alt="Mixed grill platter with falafel, grilled vegetables, rice and salad at Musti's Grill & Bistro" width="810" height="1013" loading="lazy">
@@ -1161,7 +1252,7 @@
         </picture></div>
         <span>Kebab Platter</span>
       </div>
-      <div class="arch-frame tilt-b">
+      <div class="arch-frame">
         <div class="img-wrap"><picture>
           <source srcset="images/grilled-veg-halloumi-platter.webp" type="image/webp">
           <img src="images/grilled-veg-halloumi-platter.jpg" alt="Grilled halloumi and mixed vegetable skewers with flatbread and chips at Musti's Grill & Bistro" width="900" height="900" loading="lazy" style="object-position:70% 40%;">
@@ -1189,7 +1280,7 @@
         </picture></div>
         <span>Wrap Selection</span>
       </div>
-      <div class="arch-frame tilt-a">
+      <div class="arch-frame">
         <div class="img-wrap"><picture>
           <source srcset="images/grilled-chicken-wings.webp" type="image/webp">
           <img src="images/grilled-chicken-wings.jpg" alt="Flame-grilled chicken wings on flatbread at Musti's Grill & Bistro" width="900" height="900" loading="lazy" style="object-position:32% center;">
